@@ -9,8 +9,7 @@
   background-size: cover;
   margin: -36px;
   margin-left: 10px;
-  border: 2px solid rgb(0 0 0);
-  border-radius: 14% !important;
+
 }
 
 .profile-pic img {
@@ -260,7 +259,7 @@ ul.side-nav.fixed li.logo {
   border-bottom: 1px solid #ddd;
   box-sizing: content-box;
   min-height: 90px;
-  padding: 30px 30px 40px;
+  padding: 25px 11px 31px;
 }
 
 ul.side-nav.fixed li.logo a {
@@ -307,6 +306,16 @@ h3 {
   padding-bottom: 30px;
   padding-top: 0;
   position: relative;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 5px, #e0f2f1 5px, #e0f2f1 10px),
+    repeating-linear-gradient(-45deg, transparent, transparent 5px, #e0f2f1 5px, #e0f2f1 10px),
+    linear-gradient(to right, #d0e9e3 10%, #e0f2f1 50%, #d1f2eb 90%),
+    linear-gradient(to bottom, #d1f2eb 10%, #e0f2f1 50%, #d1f2eb 90%);
+  background-size: 20px 20px;
 }
 
 .full-height {
@@ -326,15 +335,70 @@ h3 {
 }
 
 #intro.section .container {
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: 200;
   left: 0;
   position: absolute;
   top: 0;
 }
 
+
+
+/* aboput section csss */
+
+#about {
+  background-color: #f2f2f2;
+  /* Light gray background color */
+  padding: 50px 0;
+  /* Adjust padding as needed */
+}
+
+.section-title {
+  margin-bottom: 30px;
+  /* Spacing below section title */
+}
+
+.about-content {
+  color: #333;
+  /* Text color */
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  /* Spacing between paragraphs */
+}
+
+.about-content ul {
+  list-style-type: none;
+  /* Remove bullet points */
+  padding: 0;
+}
+
+.about-content ul li {
+  margin-bottom: 5px;
+  /* Spacing between list items */
+}
+
+.about-content strong {
+  color: #00796b;
+  /* Teal color for strong text */
+}
+
+.about-content a {
+  color: #009688;
+  /* Teal color for links */
+}
+
+.about-content a:hover {
+  text-decoration: underline;
+  /* Underline links on hover */
+}
+
+
+
+
 /* #intro.section .container *:not(span) {
-  font-weight: 300;
+  font-weight: 300; 
   line-height: 150%;
   padding: 0 30px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
@@ -467,6 +531,29 @@ a.hoverline {
   -webkit-transition: 0.25s all;
 }
 
+.experience-container {
+  height: 650px;
+  /* Adjust height as needed */
+  overflow-y: auto;
+  border: 2px solid #d3d3d3;
+  /* Light gray border */
+  border-radius: 15px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Padding inside the container */
+  background-color: #f8f8f8;
+  /* Light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+}
+
+.experience-scrollable {
+  padding: 10px;
+  /* Additional padding */
+}
+
+
+
 /* main a.hoverline */
 
 /* a.hoverline:hover {
@@ -566,6 +653,18 @@ small {
 /* .teal {
   background-color: #00695c !important;
 } */
+
+
+/* education section css  */
+
+
+
+
+
+
+
+
+/* other  */
 
 @media (min-width: 1200px) {
   #experience .container {
@@ -717,3 +816,6 @@ small {
     background-position-x: 30%;
   }
 }
+
+
+/* contact section css  */
