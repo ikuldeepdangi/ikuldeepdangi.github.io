@@ -1,10 +1,15 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -18,9 +23,9 @@
   <!-- End Google Tag Manager -->
 
   <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
   <!-- Font Awesome Icon - CSS-->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <!-- Custom Styles-->
   <link rel="stylesheet" href="/assets/css/style.css" />
   <title>Kuldeep Dangi | Software Developer</title>
@@ -49,7 +54,7 @@
   <meta name="twitter:site" content="@kuldeep0912" />
   <meta name="twitter:title" content="Coder | Technofreak | Explorer | Minimalist | Humane" />
   <meta name="twitter:description" content="Software Developer" />
-  <meta name="twitter:url" content="https://twitter.com/varad_bhogaya" />
+  <meta name="twitter:url" content="https://twitter.com/" />
   <meta name="author" content="Kuldeep Dangi" />
   <meta name="description"
     content="Software Developer with a passion for backend development and artificial intelligence." />
@@ -73,6 +78,1448 @@
   <meta name="robots" content="index, follow" />
   <!-- Google Site Verification for indexing -->
   <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
+
+  <style>
+    /* Updated Root Variables for Modern Design */
+    :root {
+      --primary-color: #0ea5e9; /* Updated to sky blue */
+      --secondary-color: #0284c7; /* Updated to darker sky blue */
+      --accent-color: #38bdf8; /* Updated to lighter sky blue */
+      --text-color: #1f2937;
+      --light-text: #4b5563;
+      --background: #ffffff;
+      --card-bg: #ffffff;
+      --section-bg: #f8fafc;
+      --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+      --gradient-dark: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      --gradient-light: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+      --border-radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --mobile-padding: 1rem;
+      --tablet-padding: 2rem;
+      --desktop-padding: 3rem;
+    }
+
+    /* Updated Navigation and Hero Styles for Futuristic Design */
+    .side-nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      width: 280px;
+      box-shadow: var(--shadow-md);
+      border-right: 1px solid rgba(0,0,0,0.05);
+      padding-top: 0;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+
+    .nav-profile {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .nav-profile::before {
+      display: none; /* Remove the gradient overlay */
+    }
+
+    .nav-profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--primary-color);
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+      transition: var(--transition);
+      object-fit: cover;
+      object-position: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-profile h5 {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .side-nav li a {
+      padding: 0 1.5rem;
+      height: 50px;
+      line-height: 50px;
+      font-size: 0.95rem;
+      color: var(--text-color);
+      border-left: 3px solid transparent;
+      transition: var(--transition);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .side-nav li a::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: var(--gradient-primary);
+      opacity: 0.1;
+      transition: var(--transition);
+    }
+
+    .side-nav li a:hover::before,
+    .side-nav li a.active::before {
+      width: 100%;
+    }
+
+    .side-nav li a i {
+      margin-right: 1rem;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a.active {
+      color: var(--primary-color);
+      border-left: 3px solid var(--primary-color);
+      padding-left: 2rem;
+    }
+
+    /* Enhanced Hero Section */
+    #hero {
+      min-height: 100vh;
+      background: var(--gradient-light);
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(59,130,246,0.1) 100%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.1;
+      clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%);
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 4rem 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-title {
+      font-size: 4.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      color: var(--text-color);
+      position: relative;
+      display: inline-block;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: titleReveal 1.5s ease-out;
+    }
+
+    .hero-title span.highlight {
+      background: none; /* Reset parent's gradient */
+      -webkit-background-clip: border-box; /* Reset clipping */
+      -webkit-text-fill-color: #7dd3fc; /* Bright, light sky blue (sky-300) */
+      color: #7dd3fc; /* Fallback color */
+      font-weight: 900; /* Make it extra bold */
+      /* Optional: add a subtle glow for more energy */
+      /* text-shadow: 0 0 8px rgba(125, 211, 252, 0.6); */
+    }
+
+    @keyframes titleReveal {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 2rem;
+      color: var(--light-text);
+      margin-bottom: 2rem;
+      font-weight: 600;
+      opacity: 0.9;
+      animation: fadeIn 1s ease-out 0.5s both;
+    }
+
+    .hero-description {
+      font-size: 1.25rem;
+      color: var(--light-text);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      line-height: 1.8;
+      animation: fadeIn 1s ease-out 0.7s both;
+    }
+
+    .tech-stack {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeIn 1s ease-out 0.9s both;
+    }
+
+    .tech-badge {
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(37,99,235,0.1);
+      transition: var(--transition);
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      transform: translateY(0);
+    }
+
+    .tech-badge:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: var(--shadow-lg);
+      color: white;
+      border-color: transparent;
+    }
+
+    .tech-badge::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-primary);
+      opacity: 0;
+      transition: var(--transition);
+      z-index: 0;
+    }
+
+    .tech-badge:hover::before {
+      opacity: 1;
+    }
+
+    .tech-badge span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      justify-content: center;
+      animation: fadeIn 1s ease-out 1.1s both;
+    }
+
+    .social-links a {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      color: var(--primary-color);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      font-size: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-links a i {
+      position: relative;
+      z-index: 2;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      transform: translateY(-8px) scale(1.1);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .social-links a:hover i {
+      color: white;
+      transform: scale(1.2);
+    }
+
+    .social-links a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-primary);
+      opacity: 0;
+      transition: var(--transition);
+      z-index: 1;
+    }
+
+    .social-links a:hover::before {
+      opacity: 1;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      animation: fadeIn 1s ease-out 1.3s both;
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 1.2rem 3.5rem;
+      border-radius: 35px;
+      font-weight: 700;
+      text-transform: none;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      font-size: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary-color);
+      padding: 1.2rem 3.5rem;
+      border-radius: 35px;
+      font-weight: 700;
+      text-transform: none;
+      border: 2px solid var(--primary-color);
+      transition: var(--transition);
+      font-size: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-outline:hover {
+      color: white;
+      border-color: transparent;
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: var(--shadow-md);
+      background: var(--gradient-primary);
+    }
+
+    /* Enhanced Section Styles */
+    .section {
+      padding: 8rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section:nth-child(even) {
+      background: var(--section-bg);
+    }
+
+    .section-title {
+      font-size: 3.2rem;
+      margin-bottom: 4rem;
+      position: relative;
+      display: inline-block;
+      color: var(--text-color);
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+      animation: widthGrow 1s ease-out;
+    }
+
+    @keyframes widthGrow {
+      from { width: 0; }
+      to { width: 100px; }
+    }
+
+    /* Style for Education Title to match other section titles */
+    #education .page-title {
+      font-size: 3.2rem; /* Match .section-title */
+      margin-bottom: 4rem; /* Match .section-title */
+      position: relative;
+      display: block; /* Make it block to center easily */
+      text-align: center;
+      color: var(--text-color); /* Fallback */
+      font-weight: 800; /* Match .section-title */
+      background: var(--gradient-primary); /* Use new gradient */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 0; /* Reset any Materialize padding */
+      /* Remove Materialize teal color if it was applied via class */
+      color: transparent !important; /* Ensure gradient shows */
+    }
+
+    #education .page-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%; /* Center the underline */
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: var(--gradient-primary); /* Use new gradient */
+      border-radius: 2px;
+      animation: widthGrow 1s ease-out; /* Reuse existing animation */
+    }
+
+    /* Enhanced Card Styles */
+    .experience-card, .project-card, .skill-category {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid rgba(37,99,235,0.1);
+      overflow: hidden;
+      transform: translateY(0);
+    }
+
+    .experience-card:hover, .project-card:hover, .skill-category:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Experience Card Updates */
+    .experience-title {
+      flex: 1;
+    }
+
+    .experience-title h3 {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .experience-role {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    
+
+    /* Education Cards Styling */
+    #education .card {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid rgba(37,99,235,0.1);
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    #education .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    #education .card-content {
+      padding: 2rem;
+    }
+
+    #education .card-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    #education .card-title a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    #education .card-title a:hover {
+      color: var(--accent-color);
+    }
+
+    #education .brown-text {
+      color: var(--light-text) !important;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    #education .card-content p {
+      color: var(--text-color);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    #education .card-content ul {
+      margin-top: 1rem;
+    }
+
+    #education .card-content ul li {
+      color: var(--light-text);
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    #education .card-content ul li::before {
+      content: '•';
+      color: var(--primary-color);
+      position: absolute;
+      left: 0;
+    }
+
+    /* Contact Info Cards Fix */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .contact-item {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      text-align: center;
+      border: 1px solid rgba(37,99,235,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-item i {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-item h4 {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .contact-item p {
+      margin: 0;
+    }
+
+    .contact-item a {
+      color: var(--light-text);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .contact-item a:hover {
+      color: var(--primary-color);
+    }
+
+    /* Responsive Design Improvements */
+    @media only screen and (max-width: 992px) {
+      .hero-title {
+        font-size: 3.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.8rem;
+      }
+
+      .section-title {
+        font-size: 2.8rem;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .hero-title {
+        font-size: 2.8rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+      }
+
+      .section-title {
+        font-size: 2.4rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .btn-primary, .btn-outline {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+      background: var(--background);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+    }
+
+    /* About Section */
+    #about {
+      background: var(--gradient-light);
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--light-text);
+      margin-bottom: 2rem;
+    }
+
+    .tech-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .tech-highlight-card {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .tech-highlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .tech-highlight-card h4 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* Experience Section Updates */
+    .experience-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .experience-card {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2rem;
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .experience-header {
+      padding: 2rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: var(--gradient-light);
+    }
+
+    .experience-details {
+      flex: 1;
+    }
+
+    .experience-details h3 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .company-name {
+      font-size: 1.2rem;
+      color: var(--text-color);
+      padding-left: 40px;
+    }
+
+    h3{
+      padding: 5px 40px;
+    }
+
+    .company-name a {
+      color: var(--text-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .company-name a:hover {
+      color: var(--primary-color);
+    }
+
+    .experience-role {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .experience-content {
+      padding: 2rem;
+    }
+
+    .experience-content ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .experience-content li {
+      margin-bottom: 1rem;
+      color: var(--light-text);
+      line-height: 1.6;
+      position: relative;
+      padding-left: 0.5rem;
+    }
+
+    .experience-content li::marker {
+      color: var(--primary-color);
+    }
+
+    .experience-tools {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .experience-tools b {
+      color: var(--text-color);
+      font-weight: 600;
+    }
+
+    .experience-footer {
+      padding: 1.5rem 2rem;
+      background: var(--section-bg);
+      border-top: 1px solid rgba(0,0,0,0.05);
+      color: var(--light-text);
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .experience-footer .location {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    @media only screen and (max-width: 992px) {
+      .experience-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .company-logo {
+        margin: 0 auto;
+      }
+
+      .experience-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+    }
+
+    /* Projects Section Updates */
+    .projects-container {
+      width: 100%;
+      overflow-x: auto;
+      padding: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary-color) var(--section-bg);
+    }
+
+    .projects-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .projects-container::-webkit-scrollbar-track {
+      background: var(--section-bg);
+      border-radius: 4px;
+    }
+
+    .projects-container::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 4px;
+    }
+
+    .projects-container::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+
+    .projects-grid {
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      min-width: min-content;
+    }
+
+    .project-card {
+      flex: 0 0 350px;
+      max-width: 350px;
+      margin: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* Add scroll indicators */
+    .projects-section {
+      position: relative;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+      z-index: 10;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .scroll-indicator.left {
+      left: 1rem;
+    }
+
+    .scroll-indicator.right {
+      right: 1rem;
+    }
+
+    .projects-section:hover .scroll-indicator {
+      opacity: 1;
+    }
+
+    .scroll-indicator:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .scroll-indicator {
+        display: none;
+      }
+      
+      .projects-grid {
+        padding: 0.5rem;
+        gap: 1rem;
+      }
+      
+      .project-card {
+        flex: 0 0 300px;
+        max-width: 300px;
+      }
+    }
+
+    .project-image {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .project-description {
+      color: var(--light-text);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-tech span {
+      background: var(--section-bg);
+      color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .project-tech span:hover {
+      background: var(--gradient-primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: auto;
+    }
+
+    .project-links a {
+      flex: 1;
+      text-align: center;
+      padding: 0.8rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .project-links a:first-child {
+      background: var(--gradient-primary);
+      color: white;
+    }
+
+    .project-links a:last-child {
+      background: var(--section-bg);
+      color: var(--primary-color);
+    }
+
+    .project-links a:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Skills Section Updates */
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .skill-category {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid rgba(37,99,235,0.1);
+    }
+
+    .skill-category:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .skill-category h4 {
+      font-size: 1.5rem;
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--section-bg);
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.2rem;
+      border-radius: 8px;
+      background: var(--section-bg);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+   
+
+    .skill-icon {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      z-index: 1;
+    }
+
+    
+
+    .skill-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 0.8rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .skill-level {
+      width: 100%;
+      height: 8px;
+      background: var(--section-bg);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .skill-level-bar {
+      height: 100%;
+      background: var(--gradient-primary);
+      border-radius: 4px;
+      transition: width 1.5s ease;
+      width: 0;
+      position: relative;
+    }
+
+    .skill-level-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.2) 50%, 
+        rgba(255,255,255,0) 100%);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* Skill level data attributes */
+    .skill-level-bar[data-level="95%"] { width: 95%; }
+    .skill-level-bar[data-level="85%"] { width: 85%; }
+    .skill-level-bar[data-level="80%"] { width: 80%; }
+    .skill-level-bar[data-level="75%"] { width: 75%; }
+    .skill-level-bar[data-level="70%"] { width: 70%; }
+
+    @media (max-width: 768px) {
+      .skill-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .skill-category h4 {
+        font-size: 1.3rem;
+      }
+
+      .skill-icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    /* Responsive Navigation Styles */
+    @media only screen and (max-width: 992px) {
+      .side-nav {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 999;
+      }
+
+      .side-nav.active {
+        transform: translateX(0);
+      }
+
+      /* Mobile Navigation Toggle */
+      .mobile-nav-toggle {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+        background: var(--primary-color);
+        color: white;
+        padding: 0.5rem;
+        border-radius: 50%;
+        box-shadow: var(--shadow-md);
+        cursor: pointer;
+      }
+
+      main {
+        margin-left: 0 !important;
+        padding: 0 var(--mobile-padding);
+      }
+
+      .hero-content {
+        padding: 2rem 0;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+      }
+
+      .tech-stack {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tech-badge {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .social-links a {
+        width: 50px;
+        height: 50px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .btn-primary, .btn-outline {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+    /* Tablet Styles */
+    @media only screen and (min-width: 601px) and (max-width: 992px) {
+      main {
+        padding: 0 var(--tablet-padding);
+      }
+
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.8rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .experience-card {
+        margin: 1rem 0;
+      }
+
+      .experience-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .company-logo {
+        margin: 0 auto 1rem;
+      }
+    }
+
+    /* Mobile Styles */
+    @media only screen and (max-width: 600px) {
+      .section {
+        padding: 4rem 0;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card {
+        margin: 1rem 0;
+      }
+
+      .experience-content {
+        padding: 1rem;
+      }
+
+      .experience-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+
+      .tech-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .about-content {
+        padding: 0 1rem;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+
+      .nav-profile img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .nav-profile h5 {
+        font-size: 1rem;
+      }
+    }
+
+    /* Desktop Styles */
+    @media only screen and (min-width: 993px) {
+      main {
+        margin-left: 190px;
+        padding: 0 var(--desktop-padding);
+      }
+
+      .side-nav {
+        transform: translateX(0);
+      }
+
+      .mobile-nav-toggle {
+        display: none;
+      }
+    }
+
+    /* General Responsive Improvements */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Improved Touch Targets for Mobile */
+    @media (hover: none) {
+      .btn-primary, .btn-outline, .tech-badge, .social-links a {
+        min-height: 44px;
+        min-width: 44px;
+      }
+
+      .side-nav li a {
+        min-height: 44px;
+        padding: 0 1rem;
+      }
+    }
+
+    /* Smooth Scrolling for All Devices */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Prevent Horizontal Scroll */
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* Improved Form Elements for Mobile */
+    input, textarea, select {
+      font-size: 16px !important; /* Prevents zoom on iOS */
+    }
+
+    /* Better Table Responsiveness */
+    table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
 </head>
 
 <body>
@@ -84,129 +1531,54 @@
   <!-- Navigation Menu-->
   <!-- Nav class 1 -->
   <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
-
+    <ul class="side-nav fixed table-of-contents">
       <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-          class="brand-logo grey-blue-text">
-          <img src="/assets/img/passport-new7.png" class="circle img-responsive profile-pic" alt="avatar">
+        <div class="nav-profile">
+          <img src="/assets/img/passport-new7.png" alt="Kuldeep Dangi" class="circle">
+          <h5>Kuldeep Dangi</h5>
+        </div>
+      </li>
+      <li class="bold">
+        <a href="#about" class="waves-effect waves-dark">
+          <i class="fas fa-user"></i>
+          <span>About</span>
         </a>
       </li>
-
       <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About 2 </span></a>
+        <a href="#experience" class="waves-effect waves-dark">
+          <i class="fas fa-briefcase"></i>
+          <span>Experience</span>
+        </a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
-
-      <li class="bold">
-        <!-- mdi-av-web small
-             mdi-av-my-library-books small-->
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        mdi-action-assessment
-        mdi-social-poll
-        mdi-av-equalizer
-        -->
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        -->
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-
-      <li class="bold">
-        <!-- 
-        1. mdi-communication-contacts
-        2. mdi-content-mail
-        3. mdi-communication-email
-        -->
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        1. mdi-action-description
-        2. mdi-file-folder
-        3. mdi-file-folder-open
-        4. mdi-file-attachment
-        5. mdi-file-folder-shared
-        -->
-        <!-- <a aria-label="Open Kuldeep's resume in a new tab" href="#resume" target="_blank"
-          onclick="window.open('https://drive.google.com/file/d/1-sbhlNUuZZW4u6UhggTwuOhTcEPj21hJ/view?pli=1')"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a> -->
-          <a aria-label="Open Kuldeep's resume in a new tab"
-          href="/assets/resume/kuldeep-dangi-resume.pdf" target="_blank"
-          class="waves-effect waves-dark teal-text">
-          <i class="mdi-file-folder-open small"></i><span>Resume</span>
-       </a>
-       
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Nav class 2 -->
-  <nav class="hide-on-large only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
-      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Kuldeep Dangi</a><span
-        class="black-text">Software Developer</span>
-    </div>
-  </nav>
-
-  <!-- Nav class 3 -->
-  <nav class="hide-on-large only">
-    <ul id="slide-out" class="side-nav">
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
+        <a href="#projects" class="waves-effect waves-dark">
+          <i class="fas fa-code"></i>
+          <span>Projects</span>
+        </a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
+        <a href="#skills" class="waves-effect waves-dark">
+          <i class="fas fa-tools"></i>
+          <span>Skills</span>
+        </a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+        <a href="#education" class="waves-effect waves-dark">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Education</span>
+        </a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
+        <a href="#contact" class="waves-effect waves-dark">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Open Kuldeep's resume in a new tab"
-        href="/assets/resume/kuldeep-dangi-resume.pdf" target="_blank"
-        class="waves-effect waves-dark teal-text">
-        <i class="mdi-file-folder-open small"></i><span>Resume</span>
-     </a>
-
+        <a href="/assets/resume/kuldeep-dangi-resume.pdf" target="_blank" class="waves-effect waves-dark">
+          <i class="fas fa-file-alt"></i>
+          <span>Resume</span>
+        </a>
       </li>
     </ul>
   </nav>
@@ -214,48 +1586,43 @@
   <!-- Main Content-->
   <main>
     <!-- First Section: Heading lines and image -->
-    <section id="intro" class="section scrollspy full-height">
-      <div class="overlay"></div>
+    <section id="hero" class="section scrollspy">
+      <div class="hero-background"></div>
       <div class="container">
-        <div class="col-md-9">
-          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
-            <div class="caption">
-              <h2>Hi, I'm <span class="teal">Kuldeep Dangi</span></h2>
-              <h5 style="color:#ffffff">A <span class="typing" style="font-weight: 300; color:#ff0000"></span></h5>
-              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
-              <h5>Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving a complex and
-                challenging real-world problems.</h5>
-            </div>
-            <div class="social">
-              <a href="https://www.linkedin.com/in/kuldeep-dangi" target="_blank">
-                <button class="icon-btn linkedin">
-                  <i class="fa fa-linkedin"></i>
-                </button>
-              </a>
-              <a href="https://github.com/ikuldeepdangi/" target="_blank">
-                <button class="icon-btn github">
-                  <i class="fa fa-github"></i>
-                </button>
-              </a>
-
-              <!-- <a href="https://angel.co/u/varad_bhogayata" target="_blank">
-                <button class="icon-btn angellist">
-                  <i class="fa fa-angellist"></i>
-                </button>
-              </a> -->
-
-              <!-- <a href="http://linkedin.com/in/varadbhogayata" target="_blank">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-
-                  </span>
-              </a> -->
-            </div>
-            <div class='buttons'>
-              <a href="#about" class="readme">Read More</a>
-              <a href="#contact" class="contactme">Contact Me</a>
-            </div>
+        <div class="hero-content">
+          <h1 class="hero-title">Building Intelligent Solutions with <span class="highlight">AI & Code</span></h1>
+          <h2 class="hero-subtitle">AI/ML Engineer & Full Stack Developer</h2>
+          <p class="hero-description">
+            Passionate about creating innovative AI/ML solutions and leveraging cutting-edge technology to solve complex problems. 
+            Specializing in natural language processing, conversational AI, and full-stack development with a focus on scalable applications.
+          </p>
+          <div class="tech-stack">
+            <div class="tech-badge"><span>AI/ML</span></div>
+            <div class="tech-badge"><span>Python</span></div>
+            <div class="tech-badge"><span>Django</span></div>
+            <div class="tech-badge"><span>React</span></div>
+            <div class="tech-badge"><span>NLP</span></div>
+          </div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/kuldeep-dangi" target="_blank" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/ikuldeepdangi/" target="_blank" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:kuldeepdangi0912@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn-primary">
+              <i class="fas fa-code"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="#contact" class="btn-outline">
+              <i class="fas fa-paper-plane"></i>
+              <span>Contact Me</span>
+            </a>
           </div>
         </div>
       </div>
@@ -263,667 +1630,889 @@
 
     <!-- Second Section: About -->
     <section id="about" class="section scrollspy">
-      <h3 class="page-title white-text teal">About</h3>
-      <div class="container flow-text">
-        <!-- <blockquote>
-          <h2>
-            A Software Developer with a passion for Backend Development and Artificial Intelligence.
-
-          </h2>
-        </blockquote> -->
-        <p>
-          "I am Kuldeep Dangi, a Computer Science Grad Student at Medicaps University, dedicated to problem-solving and
-          coding. With expertise in Python, Django, MySQL, PostgreSQL, MongoDB, HTML5, CSS, Java, and C++, I've gained
-          professional experience, focusing on Python, react , and Django. My passion lies in developing intricate
-          applications to address real-world issues, impacting millions of users."</p>
-        <p>
-        <ul>
-          <li><b>Programming Languages:</b> C, C++, Java, Python , Django</li>
-          <li><b>Web Development:</b> HTML, Cascading Style Sheets (CSS), JavaScript, Bootstrap 5</li>
-          <li><b>Database Management:</b> MySQL</li>
-          <li><b>Frameworks:</b> React, Node.js, Express.js</li>
-          <li><b>IDE:</b> NetBeans, GitHub, Visual Studio Code, PyCharm, Android Studio</li>
-          <li><b>Core Subjects:</b> Object-Oriented Programming, Data Structures & Algorithms, Computer Networks,
-            Operating Systems, SDLC, Database Management System</li>
-          <li><b>Soft Skills:</b> Optimistic Approach, Innovation, Team Work, Adaptability, Time Management, Creative
-            Mindset, Problem-solving</li>
-        </ul>
-
-        </p>
-
-        <!-- <p>
-          
-          Detail-oriented Software Developer with professional experience in Backend Development, Machine Learning, Computer Vision. I am adept in Python, Django, Flask, SQL, Machine Learning, Computer Vision.           
-        </p> -->
-        <p>
-          Celebrating the chance to dive into a dynamic role, merging my Software Engineering skills for a thrilling
-          adventure. I'm on the lookout for a playground where challenges fuel growth, each day packed with new learning
-          curves and exciting opportunities for personal evolution. Let's embark on this journey together!
-        </p>
-        <!-- <p>
-          Another Paragraph
-        </p>  -->
-        <p>
-          <strong>Current Focus</strong>:&nbsp;<a aria-label="Navigate to the IOT BLog"
-            href="https://medium.com/@kuldeepdangi0912/unlocking-the-potential-of-the-internet-of-things-iot-00ed266c6ff9">IOT</a>&nbsp;//&nbsp;<a
-            aria-label="Navigate to the Full Blockchain Blog"
-            href="https://medium.com/@kuldeepdangi0912/unraveling-the-mysteries-of-blockchain-technology-303e6ab41b1d">Blockchain</a>&nbsp;
-          &nbsp;<a </p>
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p class="about-text">
+            I am a passionate AI/ML Engineer and Software Developer with expertise in building intelligent applications and scalable systems. 
+            My work focuses on leveraging cutting-edge AI technologies, including natural language processing, conversational AI, and machine learning, 
+            to create innovative solutions that solve real-world problems. With experience in both AI/ML and full-stack development, 
+            I bridge the gap between advanced algorithms and practical applications.
+          </p>
+          <div class="tech-highlights">
+            <div class="tech-highlight-card">
+              <h4><i class="fas fa-brain"></i> AI/ML Development</h4>
+              <p>Building intelligent systems using OpenAI, TensorFlow, and custom NLP models for real-world applications</p>
+            </div>
+            <div class="tech-highlight-card">
+              <h4><i class="fas fa-robot"></i> Conversational AI</h4>
+              <p>Developing advanced chatbots and virtual assistants using Rasa, GPT models, and custom NLP pipelines</p>
+            </div>
+            <div class="tech-highlight-card">
+              <h4><i class="fas fa-code"></i> Full Stack Development</h4>
+              <p>Creating scalable applications with Python, Django, React, and modern web technologies</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-
     <!-- Third Section: Experience -->
     <section id="experience" class="section scrollspy">
-      <h3 class="page-title white-text teal">Experience</h3>
-      <div class="container experience-container">
-        <div class="experience-scrollable">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-container">
+          <!-- TechInfini Experience -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <a href="https://techinfini.in/" target="_blank" style="width: 13%;">
+                <img src="/assets/img/techinfini-logo.png" alt="TechInfini" class="company-logo">
+              </a>
+              <div class="experience-details">
+                <h3>Associate Software Engineer</h3>
+                <div class="company-name">
+                  <a href="https://techinfini.in/" target="_blank">TechInfini Solutions Pvt. Ltd.</a>
+                </div>
+              </div>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Currently working on innovative solutions aimed at impacting the user base.</li>
+                <li>Leading the development of AI/ML-based solutions including intelligent assistants, real estate CRMs, and NLP-driven tools for enterprise clients.</li>
+                <li>Built advanced automation pipelines using OpenAI and speech-to-text models (Whisper) to extract valuable insights from user conversations, improving response time by 60%.</li>
+                <li>Implemented custom NLP models for text classification and entity recognition in production environments, achieving 85% accuracy in customer query understanding.</li>
+                <li>Developed and deployed intelligent chatbots using Rasa and GPT models, handling over 1000+ daily customer interactions across multiple platforms.</li>
+                <li>Created automated document processing systems using GPT-4 and HuggingFace Transformers for efficient information extraction and Q&A capabilities.</li>
+                <li>Collaborated with cross-functional teams to integrate ML models into existing applications, improving workflow efficiency by 40% through automation.</li>
+                <li>Designed and maintained RESTful APIs for AI services, ensuring scalable and reliable system architecture for real-time AI applications.</li>
+              </ul>
+              <div class="experience-tools">
+                <b>Technologies:</b> Python, Django, jQuery, AJAX, OpenAI GPT-4, TensorFlow, Rasa, NLP, Whisper API, HuggingFace, React, AWS, Docker, PostgreSQL
+              </div>
+            </div>
+            <div class="experience-footer">
+              <span>May 2024 - Present</span>
+              <span class="location"><i class="fas fa-map-marker-alt"></i> Indore, India</span>
+            </div>
+          </div>
 
-<!-- Latest Experience -->
-<div class="card">
-  <div class="card-content">
-    <div class="row">
-      <div class="col s12 m2">
-        <a href="https://techinfini.in/" target="_blank">
-          <img alt="TechInfini Solutions logo" src="/assets/img/techinfini-logo.png" class="responsive-img center-block" />
-        </a>
+
+          <!-- Smashing Infolabs Experience -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <a href="https://www.smashinginfolabs.com/" target="_blank" style="width: 13%;"  >
+                <img src="/assets/img/exp-smashinginfolabs-logo-1.png" alt="Smashing Infolabs" class="company-logo">
+              </a>
+              <div class="experience-details">
+                <h3>React Developer Intern</h3>
+                <div class="company-name">
+                  <a href="https://www.smashinginfolabs.com/" target="_blank">Smashing Infolabs</a>
+                </div>
+              </div>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Developed and enhanced features for the company's personal logistics project, improving efficiency and user experience.</li>
+                <li>Learned the fundamentals of React, including component-based architecture, JSX, and state management using hooks and context API.</li>
+                <li>Worked on integrating RESTful APIs and managing application state using Redux.</li>
+                <li>Gained experience with modern development tools and practices, including version control with Git, testing, and build tools.</li>
+                <li>Collaborated with the design team to implement responsive and accessible UI components following best practices.</li>
+                <li>Participated in code reviews, team meetings, and Agile development processes to improve code quality and team productivity.</li>
+                <li>Explored advanced React concepts such as lazy loading, memoization, and optimizing performance with React DevTools.</li>
+              </ul>
+              <div class="experience-tools">
+                <b>Tools:</b> React, Redux, Git, Jest, Webpack
+              </div>
+            </div>
+            <div class="experience-footer">
+              <span>Jan 2024 - April 2024</span>
+              <span class="location"><i class="fas fa-map-marker-alt"></i> Indore, India</span>
+            </div>
+          </div>
+
+          <!-- Cisco Experience -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <a href="https://www.cisco.com" target="_blank" style="width: 13%;" >
+                <img src="/assets/img/exp-Cisco-logo-500x500.png" alt="Cisco" class="company-logo">
+              </a>
+              <div class="experience-details">
+                <h3>Industrial Training | Cisco CCNAv7</h3>
+                <div class="company-name">
+                  <a href="https://www.cisco.com" target="_blank">Cisco</a>
+                </div>
+              </div>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Studied the latest Cisco CCNA syllabus covering Network Fundamentals, including network components, topology architectures, and TCP/UDP comparison.</li>
+                <li>Explored Network Access concepts such as VLAN configuration, Spanning Tree Protocol (STP), and WLAN infrastructure connections.</li>
+                <li>Delved into IP Connectivity topics, including routing table interpretation, static routing configuration, and OSPF (v2) setup.</li>
+                <li>Covered IP Services, learning about NAT, NTP, DHCP/DNS, SNMP, Syslog, and Per-Hop Behavior (PHB) for QoS.</li>
+                <li>Gained insights into Security Fundamentals, including key security concepts, security program elements, VPNs, and wireless security protocols.</li>
+                <li>Explored Automation and Programmability topics, including network management, controller-based vs. software-defined architectures, configuration management, and REST-based APIs.</li>
+              </ul>
+            </div>
+            <div class="experience-footer">
+              <span>June 2020 - August 2020</span>
+              <span class="location"><i class="fas fa-map-marker-alt"></i> Medicaps University (Inhouse - training), India</span>
+            </div>
+          </div>
+
+          <!-- Simplbyte Experience -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <img src="/assets/img/exp-Simplbyte-logo-250x250.jpg" alt="Simplbyte" class="company-logo" style="width: 13%;" >
+              <div class="experience-details">
+                <h3>Java Developer Intern</h3>
+                <div class="company-name">
+                  Simplbyte
+                </div>
+              </div>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Programmed a terminal-based project in Java during my internship, which involved developing a user-demand-based directory system. This innovative project aimed to streamline user interactions by allowing for random directory calls and other dynamic features tailored to user preferences.</li>
+                <li>Developed various projects using Java, including a classic Tic Tac Toe game and an engaging Hangman Game, demonstrating proficiency in Java programming and problem-solving skills.</li>
+              </ul>
+            </div>
+            <div class="experience-footer">
+              <span>May 2020 - June 2018</span>
+              <span class="location"><i class="fas fa-map-marker-alt"></i> Virtual, India</span>
+            </div>
+          </div>
+
+          <!-- OASIS INFOBYTE Experience -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <img src="/assets/img/exp-OASISINFOBYTE-logo-250x250.png" alt="OASIS INFOBYTE" style="width: 13%;"  class="company-logo">
+              <div class="experience-details">
+                <h3>Web Development and Designing Intern</h3>
+                <div class="company-name">
+                  OASIS INFOBYTE
+                </div>
+              </div>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Developed a blood donation website during my internship, focusing on creating a user-friendly platform to connect blood donors with recipients. This project aimed to streamline the blood donation process by providing essential information and facilitating donor registration and blood requests.</li>
+                <li>Programmed Thermic Translator, a temperature conversion tool that allows users to easily convert between different temperature scales. This project demonstrates proficiency in Java programming and problem-solving skills, showcasing the ability to create innovative and practical solutions.</li>
+                <li>Created Workfolio Hub, a professional portfolio website designed to showcase my skills, projects, and experiences. This platform serves as a centralized hub for potential employers or collaborators to explore my work and achievements, highlighting my expertise and accomplishments in the field.</li>
+              </ul>
+            </div>
+            <div class="experience-footer">
+              <span>Feb 2022 - March 2022</span>
+              <span class="location"><i class="fas fa-map-marker-alt"></i> Virtual, India</span>
+            </div>
+          </div>
+
+          <!-- REGex Experience -->
+          <div class="experience-card">
+            <div class="experience-header">
+              <img src="/assets/img/REGex Software Services.jpg" alt="REGex Software Services"  style="width: 13%;"  class="company-logo">
+              <div class="experience-details">
+                <h3>Campus Ambassador</h3>
+                <div class="company-name">
+                  REGex Software Services || upGrad Campus
+                </div>
+              </div>
+            </div>
+            <div class="experience-content">
+              <ul>
+                <li>Led the REGex team as a Manager, responsible for raising awareness of REGex's programs among students and representing REGex in college campuses.</li>
+                <li>Spearheaded the organization of free events and sharing programs via social media platforms, contributing to the growth of REGex's community outreach.</li>
+                <li>Generated a high buzz and promoted REGex's programs on various social media platforms, effectively engaging with the target audience.</li>
+                <li>Established connections with other clubs and event organizers to expand REGex's network and foster collaboration opportunities.</li>
+                <li>Analyzed feedback and issues, and implemented strategic actions to address them, ensuring the continuous improvement and success of REGex initiatives.</li>
+              </ul>
+            </div>
+            <div class="experience-footer">
+              <span></span>
+              <span class="location"><i class="fas fa-map-marker-alt"></i> India</span>
+            </div>
+          </div>
+
+          
+        </div>
       </div>
-      <div class="col s12 m10">
-        <p>
-          <span class="card-title">
-            <a href="https://techinfini.in/" target="_blank" class="teal-text hoverline">TechInfini Solutions Pvt. Ltd.</a>
-          </span>
-        </p>
-      </div>
-    </div>
-    <div class="role brown-text text-darken-2">Associate Software Engineer</div>
-    <ul>
-      <li>
-        Currently working on innovative solutions aimed at impacting the user base.
-      </li>
-    </ul>
-    <br>
-    <b>Tools:</b> Python, Django, jQuery, AJAX
-  </div>
-  <div class="card-action">
-    <span>May 2024 - Present | Indore, India</span>
-  </div>
-</div>
+    </section>
 
-
-<!-- Smashing Infolab experience -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://www.smashinginfolabs.com/" target="_blank"><img alt="smashinginfolabs logo"
-                    src="/assets/img/exp-smashinginfolabs-logo-1.png" class="responsive-img center-block" /></a>
-              </div>
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="https://www.smashinginfolabs.com/" target="_blank"
-                      class="teal-text hoverline">Smashing infolabs</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">React Developer Intern</div>
-            <ul>
-              <li>Developed and enhanced features for the company's personal logistics project, improving efficiency and user experience.</li>
-              <li>Learned the fundamentals of React, including component-based architecture, JSX, and state management using hooks and context API.</li>
-              <li>Worked on integrating RESTful APIs and managing application state using Redux.</li>
-              <li>Gained experience with modern development tools and practices, including version control with Git, testing , and build tools.</li>
-              <li>Collaborated with the design team to implement responsive and accessible UI components following best practices.</li>
-              <li>Participated in code reviews, team meetings, and Agile development processes to improve code quality and team productivity.</li>
-              <li>Explored advanced React concepts such as lazy loading, memoization, and optimizing performance with React DevTools.</li>
-            </ul>
-            <br>
-            <b>Tools:</b> React, Redux, Git, Jest, Webpack
-          </div>
-          <div class="card-action">
-            <span>Jan 2024 - April 2024 | Indore, India</span>
-          </div>
-        </div>
-
-<!-- Experience 1 -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://www.Cisco.com" target="_blank"><img alt="Cisco logo"
-                    src="/assets/img/exp-Cisco-logo-500x500.png" class="responsive-img center-block" /></a>
-              </div>
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="http://Cisco.com" target="_blank"
-                      class="teal-text hoverline">Cisco</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Industrial Training | Cisco CCNAv7</div>
-            
-            <ul>
-              <li>
-                Studied the latest Cisco CCNA syllabus covering Network Fundamentals, including network components, topology architectures, and TCP/UDP comparison.
-              </li>
-              <li>
-                Explored Network Access concepts such as VLAN configuration, Spanning Tree Protocol (STP), and WLAN infrastructure connections.
-              </li>
-              <li>
-                Delved into IP Connectivity topics, including routing table interpretation, static routing configuration, and OSPF (v2) setup.
-              </li>
-              <li>
-                Covered IP Services, learning about NAT, NTP, DHCP/DNS, SNMP, Syslog, and Per-Hop Behavior (PHB) for QoS.
-              </li>
-              <li>
-                Gained insights into Security Fundamentals, including key security concepts, security program elements, VPNs, and wireless security protocols.
-              </li>
-              <li>
-                Explored Automation and Programmability topics, including network management, controller-based vs. software-defined architectures, configuration management, and REST-based APIs.
-              </li>
-            </ul>            
-
-          </div>
-          <div class="card-action">
-            <span>June 2020 - August 2020 | Medicaps University (Inhouse - training), India</span>
-          </div>
-        </div>
-
-        <!-- Experience 2 -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <img alt="Simplbyte logo" src="/assets/img/exp-Simplbyte-logo-250x250.jpg" class="responsive-img center-block" />
-
-              </div>
-
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="#experience" class="teal-text hoverline">Simplbyte
-                      </a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Java Developer Intern</div>
-            <ul>
-              <li>
-                Programmed a terminal-based project in Java during my internship, which involved developing a user-demand-based directory system. This innovative project aimed to streamline user interactions by allowing for random directory calls and other dynamic features tailored to user preferences.
-              </li>
-              <li>
-                Developed various projects using Java, including a classic Tic Tac Toe game and an engaging Hangman Game, demonstrating proficiency in Java programming and problem-solving skills.
-              </li>
-            </ul>
-            
-          </div>
-          <div class="card-action">
-            <span>May 2020 - June 2018 | Virtual, India</span>
-          </div>
-        </div>
-
-        <!-- Experience 3 -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <img alt="OASISINFOBYTE logo" src="/assets/img/exp-OASISINFOBYTE-logo-250x250.png" class="responsive-img center-block" />
-
-              </div>
-
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="#experience" class="teal-text hoverline">OASIS INFOBYTE
-                      </a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Web Development and Designing Intern</div>
-            <ul>
-              <li>
-                Developed a blood donation website during my internship, focusing on creating a user-friendly platform to connect blood donors with recipients. This project aimed to streamline the blood donation process by providing essential information and facilitating donor registration and blood requests.
-              </li>
-              <li>
-                Programmed Thermic Translator, a temperature conversion tool that allows users to easily convert between different temperature scales. This project demonstrates proficiency in Java programming and problem-solving skills, showcasing the ability to create innovative and practical solutions.
-              </li>
-              <li>
-                Created Workfolio Hub, a professional portfolio website designed to showcase my skills, projects, and experiences. This platform serves as a centralized hub for potential employers or collaborators to explore my work and achievements, highlighting my expertise and accomplishments in the field.
-              </li>
-            </ul>
-            
-          </div>
-          <div class="card-action">
-            <span>Feb 2022 - March 2022 | Virtual, India</span>
-          </div>
-        </div>
-
-        <!-- Experience 4 -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <img alt=" REGex logo" src="/assets/img/REGex Software Services.jpg" class="responsive-img center-block" />
-
-              </div>
-
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="#experience" class="teal-text hoverline"> REGex Software Services ||  upGrad Campus
-                  </a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Campus Ambassador</div>
-            <ul>
-              <li>
-                Led the REGex team as a Manager, responsible for raising awareness of REGex's programs among students and representing REGex in college campuses.
-              </li>
-              <li>
-                Spearheaded the organization of free events and sharing programs via social media platforms, contributing to the growth of REGex's community outreach.
-              </li>
-              <li>
-                Generated a high buzz and promoted REGex's programs on various social media platforms, effectively engaging with the target audience.
-              </li>
-              <li>
-                Established connections with other clubs and event organizers to expand REGex's network and foster collaboration opportunities.
-              </li>
-              <li>
-                Analyzed feedback and issues, and implemented strategic actions to address them, ensuring the continuous improvement and success of REGex initiatives.
-              </li>
-            </ul>
-            
-          </div>
-          <div class="card-action">
-            <span> India</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-       
     <!-- Fourth Section: Projects -->
     <section id="projects" class="section scrollspy">
-      <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
-        <div class="row">
-
-<!-- doc junction -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="music streaming app" src="/assets/img/docjunction-photo.png"
-                  style="height: 100%; width: 100%" class="activator" />
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-section">
+          <button class="scroll-indicator left" onclick="scrollProjects('left')">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="projects-container">
+            <div class="projects-grid">
+              <!-- DocJunction Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/docjunction-photo.png" alt="DocJunction">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">DocJunction</h3>
+                  <p class="project-description">
+                    A platform for sharing and discovering educational resources, built with Django and modern web technologies.
+                  </p>
+                  <div class="project-tech">
+                    <span>Django</span>
+                    <span>Python</span>
+                    <span>Bootstrap</span>
+                    <span>SQLite</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/DocJunction" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="https://github.com/ikuldeepdangi/DocJunction" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div style="border-bottom: 1px solid black; width: 100%; margin-bottom: 20px;"></div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">DocJunction<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Your Learning Revolution Starts Here: DocJunction.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite ,Agile , Authentication mechanisms</li>
-                  <li>Register/Login with Google Sign-In.</li>
-                  <li>Discover and Share Knowledge: Explore a vast library of educational notes and resources, easily searchable and filterable by subject, topic, or author.</li>
-                  <li>Organize Your Learning: Create personalized collections and curate your own educational playlists, adding or removing notes as you go.</li>
-                  <li>Track Your Learning Progress.</li>
 
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://github.com/ikuldeepdangi/DocJunction" target="_blank"
-                    data-position="top" data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/ikuldeepdangi/DocJunction" target="_blank" data-position="top"
-                    data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
+              <!-- Bloodify Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/blood-donation-image.png" alt="Bloodify">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Bloodify</h3>
+                  <p class="project-description">
+                    A blood donation management platform connecting donors with recipients, featuring real-time updates and community engagement.
+                  </p>
+                  <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Bootstrap</span>
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/Bloodify" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="https://bloodify.netlify.app/" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quizzopia Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/Quizzopia.png" alt="Quizzopia">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Quizzopia</h3>
+                  <p class="project-description">
+                    An interactive quiz platform with real-time scoring, leaderboards, and user authentication.
+                  </p>
+                  <div class="project-tech">
+                    <span>Django</span>
+                    <span>Python</span>
+                    <span>Bootstrap</span>
+                    <span>SQLite</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/QuizUp" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="https://quiz-up-app.herokuapp.com/" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- AI-Powered Blog Content Generator -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/blog-generator.png" alt="AI Blog Generator">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">AI-Powered Blog Content Generator</h3>
+                  <p class="project-description">
+                    Developed an intelligent blog content generation system using GPT-4 API, capable of creating engaging, 
+                    SEO-optimized content with customizable tone and style.
+                  </p>
+                  <div class="project-tech">
+                    <span>Django</span>
+                    <span>OpenAI GPT-4</span>
+                    <span>JavaScript</span>
+                    <span>HTML/CSS</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/AI-Blog-Generator" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Smart Document Interpreter -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/doc-interpreter.png" alt="Smart Document Interpreter">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Smart Document Interpreter & Q&A Assistant</h3>
+                  <p class="project-description">
+                    Built an intelligent document processing system that uses GPT-4 and HuggingFace Transformers 
+                    to extract insights and answer questions from complex documents.
+                  </p>
+                  <div class="project-tech">
+                    <span>Flask</span>
+                    <span>OpenAI GPT-4</span>
+                    <span>HuggingFace</span>
+                    <span>Docker</span>
+                    <span>PostgreSQL</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/Doc-Interpreter" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ZeniServe Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/zeniserve.png" alt="ZeniServe">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">ZeniServe – AI Phone Assistant</h3>
+                  <p class="project-description">
+                    Created an AI-powered phone assistant for restaurants using Twilio, Whisper, and Dialogflow, 
+                    handling customer calls, reservations, and menu queries automatically.
+                  </p>
+                  <div class="project-tech">
+                    <span>Twilio</span>
+                    <span>Whisper</span>
+                    <span>Dialogflow</span>
+                    <span>Node.js</span>
+                    <span>FastAPI</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/ZeniServe" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Resume Analyzer Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/resume-analyzer.png" alt="Resume Analyzer">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Resume Analyzer & Job Match Scoring</h3>
+                  <p class="project-description">
+                    Developed an intelligent resume parsing and job matching system using NLP and machine learning 
+                    to analyze resumes and match candidates with job requirements.
+                  </p>
+                  <div class="project-tech">
+                    <span>Flask</span>
+                    <span>spaCy</span>
+                    <span>NLTK</span>
+                    <span>PDFMiner</span>
+                    <span>SQLite</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/Resume-Analyzer" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Add More AI/ML Projects -->
+              <!-- NextGen SupportBot Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/supportbot.png" alt="NextGen SupportBot">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">NextGen SupportBot</h3>
+                  <p class="project-description">
+                    Developed an AI-powered conversational agent with content ingestion capabilities, 
+                    capable of processing documents and providing intelligent responses using advanced NLP models.
+                  </p>
+                  <div class="project-tech">
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>BeautifulSoup</span>
+                    <span>PyPDF2</span>
+                    <span>Pandas</span>
+                    <span>AI Models</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/NextGen-SupportBot" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CallVista Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/callvista.png" alt="CallVista">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">CallVista: Real Estate CRM & AI Assistant</h3>
+                  <p class="project-description">
+                    Built an intelligent CRM system with AI-powered call handling, automated lead management, 
+                    and real-time property recommendations using NLP and machine learning.
+                  </p>
+                  <div class="project-tech">
+                    <span>Python</span>
+                    <span>NLP</span>
+                    <span>Web Audio API</span>
+                    <span>CRM Integration</span>
+                    <span>React</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/CallVista" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sales Forecasting Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/sales-forecast.png" alt="Sales Forecasting">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Sales Forecasting System</h3>
+                  <p class="project-description">
+                    Developed a sophisticated sales prediction system using Prophet and machine learning, 
+                    providing accurate forecasts and trend analysis for business planning.
+                  </p>
+                  <div class="project-tech">
+                    <span>Python</span>
+                    <span>Prophet</span>
+                    <span>Pandas</span>
+                    <span>Scikit-learn</span>
+                    <span>AWS/GCP</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/Sales-Forecasting" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product Image Captioning Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/image-captioning.png" alt="Product Image Captioning">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Product Image Captioning & Query System</h3>
+                  <p class="project-description">
+                    Created an AI-powered system for automatic image captioning and visual query processing 
+                    using advanced computer vision and NLP techniques.
+                  </p>
+                  <div class="project-tech">
+                    <span>Flask</span>
+                    <span>Torch</span>
+                    <span>HuggingFace</span>
+                    <span>PIL</span>
+                    <span>NLTK</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/Image-Captioning" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TalentFlow Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/talentflow.png" alt="TalentFlow">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">TalentFlow: Recruitment & Onboarding System</h3>
+                  <p class="project-description">
+                    Built a comprehensive recruitment platform with AI-powered candidate screening, 
+                    automated onboarding, and intelligent interview scheduling.
+                  </p>
+                  <div class="project-tech">
+                    <span>Django</span>
+                    <span>Python</span>
+                    <span>PostgreSQL</span>
+                    <span>spaCy</span>
+                    <span>AWS SES</span>
+                    <span>Chart.js</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/TalentFlow" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Add CallScope Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/callscope.png" alt="CallScope AI CRM" style="background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">CallScope – AI Call Support CRM</h3>
+                  <p class="project-description">
+                    Developed an intelligent call assistant that captures live audio, transcribes calls in real-time using Whisper API, 
+                    and generates dynamic agent prompts. Enhanced call center productivity by 60% through AI-driven, context-aware suggestions.
+                  </p>
+                  <div class="project-tech">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>Whisper API</span>
+                    <span>OpenAI</span>
+                    <span>Web Audio</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/CallScope" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Add AI-Powered Conversational Tools Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/conversational-tools.png" alt="AI Conversational Tools" style="background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">AI-Powered Conversational Tools</h3>
+                  <p class="project-description">
+                    Built a sophisticated PDF Q&A assistant using LangChain and GPT-4 for context-aware document querying. 
+                    Created domain-specific chatbots with custom NLP models and RESTful API integration for automated query handling.
+                  </p>
+                  <div class="project-tech">
+                    <span>OpenAI</span>
+                    <span>LangChain</span>
+                    <span>PyPDF2</span>
+                    <span>Flask</span>
+                    <span>NLP</span>
+                    <span>scikit-learn</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/AI-Conversational-Tools" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Add AI-Driven Talent Pipeline Project -->
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="/assets/img/talent-pipeline.png" alt="AI Talent Pipeline" style="background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">AI-Driven End-to-End Talent Pipeline</h3>
+                  <p class="project-description">
+                    Engineered a comprehensive recruitment platform with AI-powered resume parsing, job matching, and candidate scoring. 
+                    Features include virtual interviews with dynamic questioning, automated onboarding, and calendar-based scheduling.
+                  </p>
+                  <div class="project-tech">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>spaCy</span>
+                    <span>NLP</span>
+                    <span>Cosine Similarity</span>
+                    <span>AI Interview Bot</span>
+                  </div>
+                  <div class="project-links">
+                    <a href="https://github.com/ikuldeepdangi/AI-Talent-Pipeline" target="_blank">
+                      <i class="fab fa-github"></i>
+                      View Code
+                    </a>
+                    <a href="#" target="_blank">
+                      <i class="fas fa-external-link-alt"></i>
+                      Live Demo
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- blood donation -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="music streaming app" src="/assets/img/blood-donation-image.png"
-                  style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Bloodify<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Be Bold, Be Brave: Donate with Bloodify
-                </p>
-              </div>
-
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> HTML, CSS, Bootstrap, Git, Agile mechanisms</li>
-                  <li>Join the Bloodify community and make a difference.</li>
-                  <li>Explore stories of hope and inspiration.</li>
-                  <li>Connect with fellow donors and share your journey.</li>
-                  <li>Track your donations and see the impact you've made.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://bloodify.netlify.app/" target="_blank"
-                    data-position="top" data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/ikuldeepdangi/Bloodify" target="_blank" data-position="top"
-                    data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-<!-- Quizopia project -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="quiz app" src="/assets/img/Quizzopia.png" style="height: 100%; width: 100%"
-                  class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Quizzopia <i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  App to Explore, Learn and Excel!
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, Heroku</li>
-                  <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
-                  <li>Play Quiz and see the leaderboard</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://quiz-up-app.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/ikuldeepdangi/QuizUp"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-<!-- uplodasding new project -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="quiz app" src="/assets/img/uploading-image.png" style="height: 100%; width: 100%"
-                  class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Comming soon <i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  New project uploading...
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> ...</li>
-                  <li>...</li>
-                  <li>...</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://demo.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com//Demo-erfgbbwib"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        
-
-          <!-- VQA -->
-          <!-- <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/project-aim_bert-bias.png"
-                  style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Visual Question Answering<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  An attention-based classification model that aims at generating an answer for a given input image.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Incorporated Convolution Neural Networks (CNN) for extracting image features and Long Short Term
-                    Memory for extracting question
-                    embeddings.</li>
-                  <li>Tested the model on the COCO dataset, abstract scenes images, and got 69% overall accuracy on the
-                    VQA evaluation metric.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/varadbhogayata/visual-question-answering" target="_blank"
-                    data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-
-          <!-- ************* -->
+          <button class="scroll-indicator right" onclick="scrollProjects('right')">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Fifth Section: Skills -->
     <section id="skills" class="section scrollspy">
-      <h3 class="page-title white-text teal">Skills</h3>
       <div class="container">
-        <!-- Languages and Databases -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Languages</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/c-logo.png" class="responsive-img" />C
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+          <!-- Programming Languages -->
+          <div class="skill-category">
+            <h4><i class="fas fa-code"></i> Programming Languages</h4>
+            <div class="skill-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/python-logo-1-300x300.jpg" alt="Python">
+                </div>
+                <div class="skill-name">Python</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="95%"></div>
+                </div>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/c++logo.png" class="responsive-img" />C++
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/java-logo.png" alt="Java">
+                </div>
+                <div class="skill-name">Java</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="85%"></div>
+                </div>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/java-logo.png" class="responsive-img" />Java
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/javascript-logo.png" alt="JavaScript">
+                </div>
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="85%"></div>
+                </div>
               </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/python-logo-1-300x300.jpg" class="responsive-img" />Python
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/html5-300x300.jpg" class="responsive-img" />HTML5
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/css3-300x300.jpg" class="responsive-img" />CSS3
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/javascript2-logo.png" class="responsive-img" />Javascript
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/react-logo.png" class="responsive-img" />React
-              </div>
-              
-              
-              <!-- <div class="col s4 m2">
-                <img alt="" src="/assets/img/shell-logo-1-300x300.jpg" class="responsive-img" />Shell Scripting
-              </div> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Databases -->
-        <!-- <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Databases</h4>
-            <div class="row text-center">
-
-            </div>
-          </div>
-        </div> -->
-
-
-        <!-- <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Libraries</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/numpy-logo-1-500x500.jpg" class="responsive-img" />NumPy
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/pandas-logo-2-500x500.jpg" class="responsive-img" />Pandas
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/opencv-logo-1-500x500.jpg" class="responsive-img" />OpenCV
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/sk-learn-logo-1-500x500.jpg" class="responsive-img" />scikit-learn
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/matplotlib-logo-1-500x500.jpg" class="responsive-img" />matplotlib
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Frameworks -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Frameworks</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/django-logo.webp" class="responsive-img" />Django
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/flask-logo.png" class="responsive-img" />Flask
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/bootstrap5-logo.png" class="responsive-img" />Bootstrap
-              </div>
-              <!-- <div class="col s4 m2">
-                <img alt="" src="/assets/img/keras-logo.png" class="responsive-img" />Keras
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/tensorflow-logo-1.png" class="responsive-img" />TensorFlow
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/pytorch-logo.png" class="responsive-img" />PyTorch
-              </div> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Other -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Other</h4>
-            <div class="row text-center">
-
-
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/git.png" class="responsive-img" />Git
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/aws.png" class="responsive-img" />AWS
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/mysql-logo-1-300x300.jpg" class="responsive-img" />MySQL
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/postgresql-logo.png" class="responsive-img" />PostgreSQL
-              </div>
-              <!-- <div class="col s4 m2">
-                <img alt="" src="/assets/img/heroku.png" class="responsive-img" />Heroku
-              </div> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- certifications -->
-        <!-- <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Certificates</h4>
-            <div class="row text-left">
-              <div class="container">
-                <div class="row">
-                  <div class="col s12 m6 l6">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/assets/img/mooc-machine-learning-coursera-800x500.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title teal-text">Machine Learning (Stanford)</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col s12 m6 l6">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/assets/img/mooc-algorithms-stanford-2-800x500.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title teal-text">Algorithms (Stanford)</span>
-                      </div>
-                    </div>
-                  </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/cpp-logo.png" alt="C++">
+                </div>
+                <div class="skill-name">C++</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="80%"></div>
                 </div>
               </div>
             </div>
           </div>
-        </div> -->
 
+          <!-- AI/ML & Data Science -->
+          <div class="skill-category">
+            <h4><i class="fas fa-brain"></i> AI/ML & Data Science</h4>
+            <div class="skill-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/tensorflow-logo.png" alt="TensorFlow">
+                </div>
+                <div class="skill-name">TensorFlow</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/openai-logo.png" alt="OpenAI">
+                </div>
+                <div class="skill-name">OpenAI/GPT</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/scikit-learn-logo.png" alt="Scikit-learn">
+                </div>
+                <div class="skill-name">Scikit-learn</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/pandas-logo.png" alt="Pandas">
+                </div>
+                <div class="skill-name">Pandas</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/spacy-logo.png" alt="spaCy">
+                </div>
+                <div class="skill-name">spaCy</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/rasa-logo.png" alt="Rasa">
+                </div>
+                <div class="skill-name">Rasa</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div class="skill-category">
+            <h4><i class="fas fa-globe"></i> Web Development</h4>
+            <div class="skill-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/django-logo.webp" alt="Django">
+                </div>
+                <div class="skill-name">Django</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/react-logo.png" alt="React">
+                </div>
+                <div class="skill-name">React</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/flask-logo.png" alt="Flask">
+                </div>
+                <div class="skill-name">Flask</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/tailwind-logo.png" alt="Tailwind CSS">
+                </div>
+                <div class="skill-name">Tailwind CSS</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Technologies -->
+          <div class="skill-category">
+            <h4><i class="fas fa-tools"></i> Tools & Technologies</h4>
+            <div class="skill-grid">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/git.png" alt="Git">
+                </div>
+                <div class="skill-name">Git</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/docker-logo.png" alt="Docker">
+                </div>
+                <div class="skill-name">Docker</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="80%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/aws-logo.png" alt="AWS">
+                </div>
+                <div class="skill-name">AWS</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <img src="/assets/img/postgresql-logo.png" alt="PostgreSQL">
+                </div>
+                <div class="skill-name">PostgreSQL</div>
+                <div class="skill-level">
+                  <div class="skill-level-bar" data-level="85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1026,34 +2615,31 @@
     </section>
 
     <!-- Eight Section: Contact -->
-    <section id="contact" class="section scrollspy full-height">
-      <h3 class="page-title white-text teal">Contact</h3>
+    <section id="contact" class="section scrollspy">
       <div class="container">
-        <p>
-          <a aria-label="Call Kuldeep" data-position="top" data-tooltip="Call Kuldeep"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-phone"></i><a
-              aria-label="Call Varad">+91 8819960608</a></a>
-        </p>
-        <p>
-          <a aria-label="Email Kuldeep" href="mailto:vbhogayata@gmail.com" target="_blank" data-position="top"
-            data-tooltip="Email Kuldeep" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-envelope"></i><a aria-label="Email Kuldeep" href="mailto:kuldeepdangi0912@gmail.com"
-              class="hoverline">kuldeepdangi0912@gmail.com</a></a>
-        </p>
-        <p>
-          <a aria-label="View Kuldeep on GitHub" href="http://github.com/ikuldeepdangi" target="_blank"
-            data-position="top" data-tooltip="View Kuldeep on GitHub"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i><a
-              aria-label="Kuldeep on Github" href="http://github.com/ikuldeepdangi" class="hoverline"
-              target="_blank">github.com/ikuldeepdangi</a></a>
-        </p>
-        <p>
-          <a aria-label="View Kuldeep on LinkedIn" href="https://www.linkedin.com/in/kuldeep-dangi/" target="_blank"
-            data-position="top" data-tooltip="View Kuldeep on LinkedIn"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-linkedin"></i><a aria-label="Kuldeep on LinkedIn" href="https://www.linkedin.com/in/kuldeep-dangi/"
-              class="hoverline" target="_blank">linkedin.com/in/kuldeep-dangi</a></a>
-        </p>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+          <p class="about-text">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <h4>Email</h4>
+              <p><a href="mailto:kuldeepdangi0912@gmail.com">kuldeepdangi0912@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <h4>LinkedIn</h4>
+              <p><a href="https://www.linkedin.com/in/kuldeep-dangi" target="_blank">linkedin.com/in/kuldeep-dangi</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <h4>GitHub</h4>
+              <p><a href="https://github.com/ikuldeepdangi" target="_blank">github.com/ikuldeepdangi</a></p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1088,6 +2674,171 @@
         closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
       })
     })
+  </script>
+
+  <!-- Add Mobile Navigation Toggle Button -->
+  <button class="mobile-nav-toggle hide-on-large-only">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Add Mobile Navigation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const sideNav = document.querySelector('.side-nav');
+      
+      mobileNavToggle.addEventListener('click', function() {
+        sideNav.classList.toggle('active');
+      });
+
+      // Close mobile nav when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!sideNav.contains(event.target) && !mobileNavToggle.contains(event.target)) {
+          sideNav.classList.remove('active');
+        }
+      });
+
+      // Close mobile nav when clicking a link
+      const navLinks = document.querySelectorAll('.side-nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          sideNav.classList.remove('active');
+        });
+      });
+    });
+  </script>
+
+  <!-- Update existing project cards with placeholder gradients -->
+  <style>
+  .project-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .project-image img {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover .project-image img {
+    transform: scale(1.05);
+  }
+
+  /* Placeholder gradients for projects without images */
+  .project-image[style*="background"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .project-image[style*="background"]::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+  }
+  </style>
+
+  <!-- Update existing project cards to use placeholder gradients -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const projectImages = document.querySelectorAll('.project-image img');
+    projectImages.forEach(img => {
+      if (!img.complete || img.naturalHeight === 0) {
+        const parent = img.parentElement;
+        const projectTitle = parent.closest('.project-card').querySelector('.project-title').textContent;
+        parent.style.background = `linear-gradient(135deg, ${getRandomGradient()})`;
+        parent.innerHTML = `<div style="position: relative; z-index: 2; color: white; text-align: center; padding: 2rem;">
+          <i class="fas fa-brain" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+          <div>${projectTitle}</div>
+        </div>`;
+      }
+    });
+  });
+
+  function getRandomGradient() {
+    const gradients = [
+      '#0ea5e9 0%, #38bdf8 100%',
+      '#0284c7 0%, #0ea5e9 100%',
+      '#0369a1 0%, #0284c7 100%',
+      '#075985 0%, #0369a1 100%'
+    ];
+    return gradients[Math.floor(Math.random() * gradients.length)];
+  }
+  </script>
+
+  <!-- Add Scroll Script -->
+  <script>
+  function scrollProjects(direction) {
+    const container = document.querySelector('.projects-container');
+    const scrollAmount = 400; // Adjust this value to control scroll distance
+    
+    if (direction === 'left') {
+      container.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
+    } else {
+      container.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  // Update scroll indicators visibility based on scroll position
+  document.querySelector('.projects-container').addEventListener('scroll', function(e) {
+    const container = e.target;
+    const leftIndicator = document.querySelector('.scroll-indicator.left');
+    const rightIndicator = document.querySelector('.scroll-indicator.right');
+    
+    // Show/hide left indicator
+    if (container.scrollLeft > 0) {
+      leftIndicator.style.display = 'flex';
+    } else {
+      leftIndicator.style.display = 'none';
+    }
+    
+    // Show/hide right indicator
+    if (container.scrollLeft < (container.scrollWidth - container.clientWidth)) {
+      rightIndicator.style.display = 'flex';
+    } else {
+      rightIndicator.style.display = 'none';
+    }
+  });
+
+  // Initialize scroll indicators on load
+  document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.projects-container');
+    const leftIndicator = document.querySelector('.scroll-indicator.left');
+    const rightIndicator = document.querySelector('.scroll-indicator.right');
+    
+    // Hide left indicator initially
+    leftIndicator.style.display = 'none';
+    
+    // Show right indicator if content is scrollable
+    if (container.scrollWidth > container.clientWidth) {
+      rightIndicator.style.display = 'flex';
+    } else {
+      rightIndicator.style.display = 'none';
+    }
+  });
   </script>
 </body>
 
