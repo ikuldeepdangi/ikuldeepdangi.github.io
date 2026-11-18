@@ -31,6 +31,7 @@ body {
   margin: 0; background: var(--bg); color: var(--ink);
   font: 400 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  padding-bottom: 72px;
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
 a { color: inherit; }

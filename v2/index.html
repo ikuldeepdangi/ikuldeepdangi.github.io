@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="robots" content="noindex" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kuldeep Dangi — v2 Swiss</title>
+<meta name="description" content="Kuldeep Dangi — Software Engineer building voice AI, LLM systems and full-stack products." />
+<link rel="icon" href="/assets/img/favicon/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#f4f4f2;--ink:#0a0a0a;--mut:#6b6b6b;--line:#0a0a0a;--red:#ff2e17;--g:clamp(16px,3vw,32px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:80px;overflow-x:hidden}
+h1,h2,h3,p,ul{margin:0}ul{padding:0;list-style:none}a{color:inherit}
+.w{max-width:1320px;margin:0 auto;padding:0 var(--g)}
+.mono{font:400 12px/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.04em}
+nav{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:20px 0;border-bottom:2px solid var(--line);align-items:center}
+nav .n{grid-column:span 4;font-weight:800;letter-spacing:-.02em}nav .l{grid-column:span 8;display:flex;justify-content:flex-end;gap:24px}
+nav a{text-decoration:none}nav a:hover{color:var(--red)}
+.hero{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:40px 0 0}
+.hero h1{grid-column:1/-1;font-weight:900;font-size:clamp(64px,17vw,260px);line-height:.8;letter-spacing:-.065em;text-transform:uppercase}
+.hero h1 span{display:block}.hero h1 span:last-child{color:var(--red)}
+.hero .meta{grid-column:1/5;padding-top:32px}.hero .lede{grid-column:6/-1;padding-top:32px;font-size:clamp(20px,2.2vw,30px);line-height:1.2;font-weight:500;letter-spacing:-.02em}
+.dot{display:inline-block;width:10px;height:10px;background:var(--red);border-radius:50%;margin-right:8px}
+.mq{margin-top:56px;border-block:2px solid var(--line);overflow:hidden;white-space:nowrap}
+.mq div{display:inline-flex;gap:48px;padding:16px 0;animation:m 40s linear infinite;font-weight:800;font-size:28px;letter-spacing:-.02em;text-transform:uppercase}
+.mq div span::after{content:"✳";color:var(--red);margin-left:48px}
+@keyframes m{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid var(--line)}
+.stats div{padding:28px var(--g) 28px 0}.stats div+div{border-left:2px solid var(--line);padding-left:var(--g)}
+.stats b{display:block;font-weight:900;font-size:clamp(44px,6vw,88px);letter-spacing:-.05em;line-height:1}
+sec,section{display:block;padding-top:120px}
+.sh{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);border-bottom:2px solid var(--line);padding-bottom:16px;align-items:end}
+.sh .mono{grid-column:span 3;color:var(--red)}.sh h2{grid-column:span 9;font-weight:900;font-size:clamp(40px,7vw,104px);letter-spacing:-.055em;line-height:.85;text-transform:uppercase}
+.case{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:32px 0;border-bottom:2px solid var(--line);transition:background .25s,color .25s}
+.case:hover{background:var(--ink);color:var(--bg)}.case:hover .mut{color:#aaa}
+.case .i{grid-column:span 1;font-weight:800;color:var(--red)}.case h3{grid-column:span 4;font-weight:900;font-size:clamp(32px,4vw,56px);letter-spacing:-.04em;line-height:.9;text-transform:uppercase}
+.case .d{grid-column:span 5}.case .d p+p{margin-top:12px}.case .k{grid-column:span 2;text-align:right}
+.mut{color:var(--mut)}.imp{font-weight:700;color:var(--red)}
+.list li{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:16px 0;border-bottom:1px solid #c9c9c4}
+.list .a{grid-column:span 4;font-weight:700}.list .b{grid-column:span 6}.list .c{grid-column:span 2;text-align:right}
+.list a{text-decoration:none}.list a:hover{color:var(--red)}
+.svc{display:grid;grid-template-columns:repeat(4,1fr)}.svc div{padding:28px var(--g) 28px 0;border-bottom:2px solid var(--line)}.svc div+div{border-left:2px solid var(--line);padding-left:var(--g)}
+.svc h3{font-weight:800;font-size:24px;letter-spacing:-.03em;margin:20px 0 10px}
+.xp li{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:28px 0;border-bottom:2px solid var(--line)}
+.xp .t{grid-column:span 3}.xp .r{grid-column:span 9}.xp h3{font-weight:800;font-size:28px;letter-spacing:-.03em}.xp ul{margin-top:12px;display:grid;gap:6px}.xp ul li{display:block;border:0;padding:0 0 0 18px;position:relative}.xp ul li::before{content:"—";position:absolute;left:0;color:var(--red)}
+.sk{display:grid;grid-template-columns:repeat(4,1fr)}.sk div{padding:28px var(--g) 0 0}.sk div+div{border-left:2px solid var(--line);padding-left:var(--g)}.sk p{font-size:20px;font-weight:600;letter-spacing:-.02em;margin-top:14px;line-height:1.35}
+.ct{background:var(--red);color:var(--ink);margin-top:140px;padding:80px 0 60px}
+.ct h2{font-weight:900;font-size:clamp(48px,11vw,180px);letter-spacing:-.06em;line-height:.82;text-transform:uppercase}
+.ct a.em{display:inline-block;margin-top:40px;font-weight:800;font-size:clamp(20px,3.4vw,48px);letter-spacing:-.03em;text-decoration:none;border-bottom:4px solid;word-break:break-all}
+.ct .lk{display:flex;gap:32px;margin-top:48px;flex-wrap:wrap}.ct .lk a{text-decoration:none;font-weight:700}
+@media(max-width:860px){.hero .meta,.hero .lede{grid-column:1/-1}.hero .meta{order:2}.stats,.svc,.sk{grid-template-columns:1fr 1fr}.stats div:nth-child(3),.svc div:nth-child(3),.sk div:nth-child(3){border-left:0;padding-left:0}
+.case>*,.list li>*,.xp li>*{grid-column:1/-1!important;text-align:left!important}.case,.list li,.xp li{gap:8px}.sh .mono,.sh h2{grid-column:1/-1}nav .n{grid-column:span 12}nav .l{display:none}}
+@media(max-width:520px){.stats,.svc,.sk{grid-template-columns:1fr}.stats div,.svc div,.sk div{border-left:0!important;padding-left:0!important}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="/assets/data.js"></script>
+<script>
+(function(){
+const P=window.PROFILE,pad=n=>String(n).padStart(2,"0");
+const [f,l]=P.name.split(" ");
+document.getElementById("app").innerHTML=`
+<div class="w">
+<nav><div class="n">${P.name} ©${new Date().getFullYear()}</div><div class="l mono"><a href="#work">Work</a><a href="#xp">Experience</a><a href="#stack">Stack</a><a href="${P.links.resume}" target="_blank" rel="noopener">Résumé ↗</a><a href="#contact">Contact</a></div></nav>
+<header class="hero"><h1><span>${f}</span><span>${l}.</span></h1>
+<div class="meta mono"><p><span class="dot"></span>${P.available}</p><p style="margin-top:8px">${P.role} · ${P.location}</p></div>
+<p class="lede">${P.headline.join(" ")} ${P.intro}</p></header>
+</div>
+<div class="mq" aria-hidden="true"><div>${[...P.skills[0].items,...P.skills[1].items].concat([...P.skills[0].items,...P.skills[1].items]).map(s=>`<span>${s}</span>`).join("")}</div></div>
+<div class="w">
+<div class="stats">${P.stats.map(s=>`<div><b>${s.value}</b><span class="mono">${s.label}</span></div>`).join("")}</div>
+<section id="work"><div class="sh"><span class="mono">01 / Selected work</span><h2>Case studies</h2></div>
+${P.cases.map((c,i)=>`<article class="case"><span class="i mono">${pad(i+1)}</span><h3>${c.name}</h3><div class="d"><p><b>${c.tagline}.</b> ${c.problem}</p><p class="mut">${c.approach}</p><p class="imp">→ ${c.impact}</p></div><span class="k mono mut">${c.stack.join("<br>")}</span></article>`).join("")}
+<ul class="list" style="margin-top:56px">${P.projects.map(p=>`<li><span class="a">${p.url?`<a href="${p.url}" target="_blank" rel="noopener">${p.name} ↗</a>`:p.name}</span><span class="b mut">${p.desc}</span><span class="c mono mut">${p.tag}</span></li>`).join("")}</ul>
+<p class="mono mut" style="margin-top:16px">${P.ndaNote}</p></section>
+<section><div class="sh"><span class="mono">02 / Services</span><h2>What I build</h2></div>
+<div class="svc">${P.services.map((s,i)=>`<div><span class="mono" style="color:var(--red)">${pad(i+1)}</span><h3>${s.title}</h3><p class="mut">${s.desc}</p></div>`).join("")}</div></section>
+<section id="xp"><div class="sh"><span class="mono">03 / Experience</span><h2>Track record</h2></div>
+<ul class="xp">${P.experience.map(e=>`<li><div class="t mono">${e.when}<br><span class="mut">${e.place}</span></div><div class="r"><h3>${e.role} <span class="mut">/ ${e.org}</span></h3><ul>${e.points.map(p=>`<li>${p}</li>`).join("")}</ul>${e.stack?`<p class="mono mut" style="margin-top:14px">${e.stack}</p>`:""}</div></li>`).join("")}</ul></section>
+<section id="stack"><div class="sh"><span class="mono">04 / Stack</span><h2>Toolkit</h2></div>
+<div class="sk">${P.skills.map(s=>`<div><span class="mono" style="color:var(--red)">${s.group}</span><p>${s.items.join(", ")}</p></div>`).join("")}</div>
+<p class="mono mut" style="margin-top:40px">${P.education.degree} · ${P.education.school} · ${P.education.detail} · ${P.education.year}</p></section>
+</div>
+<section class="ct" id="contact"><div class="w"><p class="mono" style="margin-bottom:24px">05 / Contact</p><h2>Let's build<br>the next one.</h2>
+<a class="em" href="mailto:${P.email}?subject=Project%20enquiry">${P.email} →</a>
+<div class="lk mono"><a href="${P.links.linkedin}" target="_blank" rel="noopener">LinkedIn ↗</a><a href="${P.links.github}" target="_blank" rel="noopener">GitHub ↗</a><a href="${P.links.resume}" target="_blank" rel="noopener">Résumé ↗</a><span>${P.location} · ${P.timezone}</span></div></div></section>`;
+})();
+</script>
+<script src="/assets/switcher.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="robots" content="noindex" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kuldeep Dangi — v7 Noir</title>
+<meta name="description" content="Kuldeep Dangi — Software Engineer building voice AI, LLM systems and full-stack products." />
+<link rel="icon" href="/assets/img/favicon/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#0a0908;--bg2:#100e0c;--fg:#ece5d8;--mut:#8f877a;--gold:#c8a96a;--gold2:#e9d3a1;--line:rgba(200,169,106,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:300 16px/1.75 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:96px;overflow-x:hidden}
+h1,h2,h3,p,ul{margin:0}ul{padding:0;list-style:none}a{color:inherit;text-decoration:none}
+.w{max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300}
+.cap{font:500 11px/1 Manrope;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.gold{background:linear-gradient(180deg,var(--gold2),var(--gold) 60%,#8a6d37);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{display:flex;justify-content:space-between;align-items:center;padding:32px 0}
+nav .mk{font:400 22px/1 "Cormorant Garamond";letter-spacing:.3em}
+nav .l{display:flex;gap:40px}nav .l a{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);transition:color .3s}nav .l a:hover{color:var(--gold2)}
+.hero{min-height:calc(100vh - 100px);display:flex;flex-direction:column;justify-content:center;text-align:center;position:relative}
+.hero::before{content:"";position:absolute;left:50%;top:50%;width:min(80vw,820px);aspect-ratio:1;transform:translate(-50%,-50%);border:1px solid var(--line);border-radius:50%;pointer-events:none}
+.hero::after{content:"";position:absolute;left:50%;top:50%;width:min(60vw,600px);aspect-ratio:1;transform:translate(-50%,-50%);border:1px solid rgba(200,169,106,.1);border-radius:50%;pointer-events:none}
+.hero h1{font-size:clamp(52px,9.5vw,148px);line-height:.92;letter-spacing:-.02em;margin:34px 0}
+.hero h1 em{font-style:italic}
+.hero p.ld{max-width:56ch;margin:0 auto;color:var(--mut);font-size:17px}
+.rule{width:1px;height:80px;background:linear-gradient(var(--gold),transparent);margin:56px auto 0}
+.cta{display:inline-flex;align-items:center;gap:14px;margin-top:44px;padding:16px 34px;border:1px solid var(--gold);font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold2);position:relative;overflow:hidden;transition:color .5s}
+.cta::before{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .6s cubic-bezier(.7,0,.2,1);z-index:-1}
+.cta:hover{color:var(--bg)}.cta:hover::before{transform:scaleX(1);transform-origin:left}.cta{isolation:isolate}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);margin-top:40px}
+.stats div{padding:44px 20px;text-align:center}.stats div+div{border-left:1px solid var(--line)}
+.stats b{display:block;font:300 clamp(44px,5vw,72px)/1 "Cormorant Garamond";margin-bottom:14px}
+section{padding-top:clamp(120px,14vw,200px)}
+.sh{text-align:center;margin-bottom:80px}.sh h2{font-size:clamp(44px,6.5vw,96px);line-height:1;margin-top:22px}.sh h2 em{font-style:italic}
+.case{display:grid;grid-template-columns:120px 1fr 1fr;gap:clamp(24px,4vw,64px);padding:64px 0;border-top:1px solid var(--line)}
+.case .num{font:300 64px/1 "Cormorant Garamond";color:var(--gold)}
+.case h3{font:300 clamp(44px,5vw,72px)/1 "Cormorant Garamond";letter-spacing:-.01em}
+.case .tg{font:italic 300 24px/1.3 "Cormorant Garamond";color:var(--gold2);margin-top:14px}
+.case .d p{color:var(--mut)}.case .d p+p{margin-top:16px}
+.case .im{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font:400 20px/1.3 "Cormorant Garamond";color:var(--fg)}
+.case .st{margin-top:12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.pl li{display:grid;grid-template-columns:1fr 2fr auto;gap:24px;padding:22px 0;border-top:1px solid var(--line);align-items:baseline}
+.pl li b{font:400 24px/1.2 "Cormorant Garamond"}.pl li span{color:var(--mut)}.pl li .t{font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.svc div{padding:48px 28px 20px 0}.svc div+div{padding-left:28px;border-left:1px solid var(--line)}
+.svc h3{font:300 32px/1.05 "Cormorant Garamond";margin:22px 0 14px}.svc p{color:var(--mut);font-size:15px}
+.xp li{display:grid;grid-template-columns:240px 1fr;gap:48px;padding:48px 0;border-top:1px solid var(--line)}
+.xp h3{font:300 36px/1.1 "Cormorant Garamond"}.xp h3 em{color:var(--gold2)}
+.xp ul{margin-top:16px;display:grid;gap:10px}.xp ul li{display:block;border:0;padding:0 0 0 28px;position:relative;color:var(--mut)}.xp ul li::before{content:"";position:absolute;left:0;top:.85em;width:14px;height:1px;background:var(--gold)}
+.ct{text-align:center;padding:clamp(80px,10vw,140px) 0;border-block:1px solid var(--line);margin-top:clamp(120px,14vw,200px);background:radial-gradient(600px 300px at 50% 50%,rgba(200,169,106,.08),transparent)}
+.ct h2{font-size:clamp(52px,9vw,140px);line-height:.95}.ct h2 em{font-style:italic}
+.ct a.em{display:inline-block;margin-top:40px;font:300 clamp(22px,3vw,40px)/1.2 "Cormorant Garamond";border-bottom:1px solid var(--gold);padding-bottom:6px;word-break:break-all}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:40px 0;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1.4s cubic-bezier(.2,.7,.1,1),transform 1.4s cubic-bezier(.2,.7,.1,1)}.rv.in{opacity:1;transform:none}
+.ln{display:block;overflow:hidden}.ln>span{display:block;transform:translateY(105%);transition:transform 1.4s cubic-bezier(.2,.7,.1,1)}.loaded .ln>span{transform:none}.ln:nth-child(2)>span{transition-delay:.15s}.ln:nth-child(3)>span{transition-delay:.3s}
+@media(max-width:900px){nav .l{display:none}.stats,.svc{grid-template-columns:1fr 1fr}.stats div:nth-child(3),.svc div:nth-child(3){border-left:0;padding-left:0}.case{grid-template-columns:1fr;gap:16px;padding:48px 0}.case .num{font-size:40px}.xp li{grid-template-columns:1fr;gap:8px}.pl li{grid-template-columns:1fr;gap:4px}.svc div{padding-left:0!important;border-left:0!important}}
+@media(max-width:520px){.stats{grid-template-columns:1fr}.stats div{border-left:0!important}.svc{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.rv,.ln>span{opacity:1!important;transform:none!important;transition:none}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="/assets/data.js"></script>
+<script>
+(function(){
+const P=window.PROFILE,R=["I","II","III","IV","V","VI","VII","VIII","IX","X"];
+document.getElementById("app").innerHTML=`<div class="w">
+<nav><span class="mk">K · D</span><div class="l"><a href="#work">Work</a><a href="#xp">Experience</a><a href="${P.links.resume}" target="_blank" rel="noopener">Résumé</a><a href="#contact">Contact</a></div></nav>
+<header class="hero"><p class="cap">${P.role} — ${P.location}</p>
+<h1 class="serif"><span class="ln"><span>I build <em class="gold">AI</em></span></span><span class="ln"><span>that listens, reads</span></span><span class="ln"><span><em>and talks back.</em></span></span></h1>
+<p class="ld">${P.intro}</p><div><a class="cta" href="#contact">Begin a conversation</a></div><div class="rule"></div></header>
+<div class="stats rv">${P.stats.map(s=>`<div><b class="gold">${s.value}</b><span class="cap" style="color:var(--mut)">${s.label}</span></div>`).join("")}</div>
+
+<section id="work"><div class="sh rv"><p class="cap">Selected work</p><h2 class="serif">A few things I've <em>built</em></h2></div>
+${P.cases.map((c,i)=>`<article class="case rv"><span class="num">${R[i]}.</span><div><p class="cap" style="color:var(--mut)">${c.kind}</p><h3 style="margin-top:16px">${c.name}</h3><p class="tg">${c.tagline}</p></div><div class="d"><p>${c.problem}</p><p>${c.approach}</p><p class="im gold">${c.impact}</p><p class="st">${c.stack.join(" · ")}</p></div></article>`).join("")}
+<ul class="pl rv" style="margin-top:40px">${P.projects.map(p=>`<li><b>${p.url?`<a href="${p.url}" target="_blank" rel="noopener">${p.name} ↗</a>`:p.name}</b><span>${p.desc}</span><span class="t">${p.tag}</span></li>`).join("")}</ul>
+<p class="rv" style="text-align:center;color:var(--mut);margin-top:40px;font:italic 300 20px 'Cormorant Garamond'">${P.ndaNote}</p></section>
+
+<section><div class="sh rv"><p class="cap">Services</p><h2 class="serif">What I can <em>craft</em> for you</h2></div>
+<div class="svc rv">${P.services.map((s,i)=>`<div><span class="cap">${R[i]}</span><h3>${s.title}</h3><p>${s.desc}</p></div>`).join("")}</div></section>
+
+<section id="xp"><div class="sh rv"><p class="cap">Experience</p><h2 class="serif">The <em>record</em></h2></div>
+<ul class="xp">${P.experience.map(e=>`<li class="rv"><div><p class="cap">${e.when}</p><p style="color:var(--mut);margin-top:10px;font-size:14px">${e.place}</p></div><div><h3>${e.role}, <em>${e.org}</em></h3><ul>${e.points.map(p=>`<li>${p}</li>`).join("")}</ul>${e.stack?`<p class="cap" style="color:var(--mut);margin-top:20px;letter-spacing:.14em;line-height:1.8">${e.stack}</p>`:""}</div></li>`).join("")}</ul>
+<div class="svc rv" style="margin-top:80px">${P.skills.map(s=>`<div><span class="cap">${s.group}</span><p style="margin-top:18px;color:var(--fg);font:300 20px/1.5 'Cormorant Garamond'">${s.items.join(", ")}</p></div>`).join("")}</div>
+<p class="rv" style="text-align:center;margin-top:80px;font:300 26px/1.4 'Cormorant Garamond'">${P.education.degree}<br><span style="color:var(--mut);font-size:18px">${P.education.school} · ${P.education.detail} · ${P.education.year}</span></p></section>
+</div>
+<section class="ct" id="contact"><div class="w rv"><p class="cap">Contact</p><h2 class="serif" style="margin-top:28px">Shall we <em class="gold">begin?</em></h2>
+<a class="em" href="mailto:${P.email}?subject=Project%20enquiry">${P.email}</a>
+<p style="margin-top:36px;display:flex;gap:36px;justify-content:center;flex-wrap:wrap" class="cap"><a href="${P.links.linkedin}" target="_blank" rel="noopener">LinkedIn</a><a href="${P.links.github}" target="_blank" rel="noopener">GitHub</a><a href="${P.links.resume}" target="_blank" rel="noopener">Résumé</a></p></div></section>
+<div class="w"><footer><span>© ${new Date().getFullYear()} ${P.name}</span><span>${P.location} · ${P.timezone}</span></footer></div>`;
+requestAnimationFrame(()=>document.body.classList.add("loaded"));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+})();
+</script>
+<script src="/assets/switcher.js" defer></script>
+</body>
+</html>

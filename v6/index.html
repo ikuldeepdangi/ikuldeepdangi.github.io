@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="robots" content="noindex" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kuldeep Dangi — v6 Aurora</title>
+<meta name="description" content="Kuldeep Dangi — Software Engineer building voice AI, LLM systems and full-stack products." />
+<link rel="icon" href="/assets/img/favicon/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#070814;--fg:#eef0ff;--mut:#a3a8c7;--glass:rgba(255,255,255,.055);--gl:rgba(255,255,255,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:300 16.5px/1.6 Sora,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:96px;overflow-x:hidden}
+h1,h2,h3,p,ul{margin:0}ul{padding:0;list-style:none}a{color:inherit;text-decoration:none}
+.sky{position:fixed;inset:0;z-index:-1;overflow:hidden;filter:blur(70px) saturate(140%)}
+.sky i{position:absolute;border-radius:50%;opacity:.55;mix-blend-mode:screen;animation:f 22s ease-in-out infinite alternate}
+.sky i:nth-child(1){width:55vw;height:55vw;left:-10vw;top:-15vw;background:#5b3cff}
+.sky i:nth-child(2){width:45vw;height:45vw;right:-10vw;top:10vh;background:#00c2ff;animation-duration:26s}
+.sky i:nth-child(3){width:40vw;height:40vw;left:25vw;top:55vh;background:#ff3d9a;animation-duration:30s;opacity:.35}
+.sky i:nth-child(4){width:30vw;height:30vw;right:15vw;bottom:-10vw;background:#00ffa3;animation-duration:24s;opacity:.25}
+@keyframes f{to{transform:translate(8vw,6vh) scale(1.15)}}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.w{max-width:1180px;margin:0 auto;padding:0 clamp(16px,3vw,32px)}
+.gl{background:var(--glass);border:1px solid var(--gl);border-radius:24px;backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 20px 50px rgba(0,0,0,.25)}
+.mono{font:400 12px/1.4 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 14px 12px 22px;margin-top:18px;position:sticky;top:14px;z-index:9;border-radius:999px}
+nav .l{display:flex;gap:4px}nav .l a{padding:8px 16px;border-radius:999px;font-size:14px;color:var(--mut)}nav .l a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.ir{background:linear-gradient(100deg,#fff,#cbbcff 30%,#8fe6ff 60%,#ffb3dc 90%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 8s linear infinite}
+@keyframes sh{to{background-position:200% center}}
+.hero{text-align:center;padding:clamp(80px,14vw,170px) 0 60px}
+.hero .pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;font-size:14px}
+.hero .pill i{width:8px;height:8px;border-radius:50%;background:#00ffa3;box-shadow:0 0 12px #00ffa3}
+.hero h1{font-weight:600;font-size:clamp(44px,8vw,112px);line-height:1;letter-spacing:-.045em;margin:28px auto 26px;max-width:12ch}
+.hero p{color:var(--mut);max-width:62ch;margin:0 auto;font-size:18px}
+.btns{display:flex;gap:12px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+.b{padding:14px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,box-shadow .2s}.b:hover{transform:translateY(-2px)}
+.b1{background:linear-gradient(135deg,#7b5cff,#00c2ff);box-shadow:0 10px 30px rgba(91,60,255,.45)}.b1:hover{box-shadow:0 14px 40px rgba(91,60,255,.6)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;overflow:hidden}.stats div{padding:28px;text-align:center}.stats div+div{border-left:1px solid var(--gl)}
+.stats b{display:block;font-size:clamp(34px,4vw,50px);font-weight:600;letter-spacing:-.04em}
+section{padding-top:130px}.sh{text-align:center;margin-bottom:44px}.sh h2{font-size:clamp(34px,5vw,64px);font-weight:600;letter-spacing:-.04em;margin-top:12px}
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.case{padding:32px;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s;transform-style:preserve-3d}
+.case:hover{border-color:rgba(255,255,255,.28)}
+.case h3{font-size:32px;font-weight:600;letter-spacing:-.03em;margin:14px 0 8px}.case .t{color:#fff;font-weight:400}.case p{color:var(--mut);margin-top:10px}
+.case .imp{display:inline-block;margin-top:18px;padding:8px 14px;border-radius:999px;background:rgba(0,255,163,.1);border:1px solid rgba(0,255,163,.3);color:#9dffd6;font-weight:400;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}.chips span{font:400 12px "JetBrains Mono";padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--gl);color:#d6d9f5}
+.pl{margin-top:20px;padding:10px 28px}.pl li{display:grid;grid-template-columns:1fr 2fr auto;gap:16px;padding:16px 0;border-bottom:1px solid var(--gl)}.pl li:last-child{border:0}.pl li span:nth-child(2){color:var(--mut)}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.svc .gl{padding:26px}.svc h3{font-size:19px;font-weight:600;margin:14px 0 8px}.svc p{color:var(--mut);font-size:15px}
+.ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(123,92,255,.5),rgba(0,194,255,.4));border:1px solid var(--gl);font-size:20px}
+.xp{padding:12px 32px}.xp li{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--gl)}.xp li:last-child{border:0}
+.xp h3{font-size:20px;font-weight:600}.xp h3 span{color:var(--mut);font-weight:300}.xp ul{margin-top:10px;display:grid;gap:6px}.xp ul li{display:block;border:0;padding:0 0 0 18px;position:relative;color:var(--mut)}.xp ul li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#7b5cff,#00c2ff)}
+.ct{text-align:center;padding:clamp(48px,8vw,96px) 24px}.ct h2{font-size:clamp(40px,7vw,96px);font-weight:600;letter-spacing:-.05em;line-height:1}.ct p{color:var(--mut);margin-top:16px}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.cases{grid-template-columns:1fr}.svc,.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(3){border-left:0}.xp li{grid-template-columns:1fr;gap:6px}.pl li{grid-template-columns:1fr;gap:4px}nav .l{display:none}}
+@media(max-width:520px){.svc,.stats{grid-template-columns:1fr}.stats div{border-left:0!important}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="grain" aria-hidden="true"></div>
+<div id="app"></div>
+<script src="/assets/data.js"></script>
+<script>
+(function(){
+const P=window.PROFILE,icons=["🎙️","💬","⚙️","🧩"];
+document.getElementById("app").innerHTML=`<div class="w">
+<nav class="gl"><strong style="font-weight:600">${P.name}</strong><div class="l"><a href="#work">Work</a><a href="#xp">Experience</a><a href="${P.links.resume}" target="_blank" rel="noopener">Résumé</a></div><a class="b b1" style="padding:10px 18px;font-size:14px" href="#contact">Let's talk</a></nav>
+<header class="hero"><span class="pill gl"><i></i>${P.available}</span>
+<h1>I build <span class="ir">AI that listens,</span> reads and talks back.</h1><p>${P.intro}</p>
+<div class="btns"><a class="b b1" href="mailto:${P.email}?subject=Project%20enquiry">Start a project</a><a class="b gl" href="#work">Explore the work</a></div>
+<div class="stats gl rv">${P.stats.map(s=>`<div><b class="ir">${s.value}</b><span class="mono">${s.label}</span></div>`).join("")}</div></header>
+<section id="work"><div class="sh rv"><span class="mono">Selected work</span><h2>Built for real conversations</h2></div>
+<div class="cases">${P.cases.map(c=>`<article class="gl case rv tilt"><span class="mono">${c.kind}</span><h3>${c.name}</h3><p class="t">${c.tagline}.</p><p>${c.approach}</p><span class="imp">✦ ${c.impact}</span><div class="chips">${c.stack.map(s=>`<span>${s}</span>`).join("")}</div></article>`).join("")}</div>
+<ul class="gl pl rv">${P.projects.map(p=>`<li><b style="font-weight:600">${p.url?`<a href="${p.url}" target="_blank" rel="noopener">${p.name} ↗</a>`:p.name}</b><span>${p.desc}</span><span class="mono">${p.tag}</span></li>`).join("")}</ul>
+<p class="mono rv" style="text-align:center;margin-top:18px;text-transform:none;letter-spacing:0">${P.ndaNote}</p></section>
+<section><div class="sh rv"><span class="mono">Services</span><h2>What I can build for you</h2></div><div class="svc">${P.services.map((s,i)=>`<div class="gl rv"><span class="ic">${icons[i]}</span><h3>${s.title}</h3><p>${s.desc}</p></div>`).join("")}</div></section>
+<section><div class="sh rv"><span class="mono">How I work</span><h2>From call to production</h2></div><div class="svc">${P.process.map((s,i)=>`<div class="gl rv"><span class="mono">Step ${i+1}</span><h3>${s.step}</h3><p>${s.desc}</p></div>`).join("")}</div></section>
+<section id="xp"><div class="sh rv"><span class="mono">Experience</span><h2>Where I've shipped</h2></div>
+<ul class="gl xp rv">${P.experience.map(e=>`<li><div><p class="mono">${e.when}</p><p class="mono" style="opacity:.7;margin-top:4px">${e.place}</p></div><div><h3>${e.role} <span>· ${e.org}</span></h3><ul>${e.points.map(p=>`<li>${p}</li>`).join("")}</ul>${e.stack?`<div class="chips">${e.stack.split(" · ").map(s=>`<span>${s}</span>`).join("")}</div>`:""}</div></li>`).join("")}</ul>
+<div class="svc" style="margin-top:16px">${P.skills.map(s=>`<div class="gl rv"><span class="mono">${s.group}</span><div class="chips">${s.items.map(i=>`<span>${i}</span>`).join("")}</div></div>`).join("")}</div>
+<p class="mono rv" style="text-align:center;margin-top:24px">${P.education.degree} · ${P.education.school} · ${P.education.detail}</p></section>
+<section id="contact"><div class="gl ct rv"><span class="mono">Contact</span><h2 style="margin-top:14px">Let's make your product <span class="ir">talk.</span></h2><p>I usually reply within a day · ${P.location}</p>
+<div class="btns"><a class="b b1" href="mailto:${P.email}?subject=Project%20enquiry">${P.email}</a><a class="b gl" href="${P.links.linkedin}" target="_blank" rel="noopener">LinkedIn ↗</a><a class="b gl" href="${P.links.github}" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
+<p class="mono" style="text-align:center;padding:40px 0">© ${new Date().getFullYear()} ${P.name}</p></div>`;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+if(matchMedia("(hover:hover)").matches)document.querySelectorAll(".tilt").forEach(c=>{c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg)`;});c.addEventListener("pointerleave",()=>c.style.transform="");});
+})();
+</script>
+<script src="/assets/switcher.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="robots" content="noindex" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kuldeep Dangi — v8 Kinetic</title>
+<meta name="description" content="Kuldeep Dangi — Software Engineer building voice AI, LLM systems and full-stack products." />
+<link rel="icon" href="/assets/img/favicon/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#0d0d0d;--fg:#f1f1ec;--mut:#8b8b85;--ac:#d4ff3a;--line:#262624}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip}body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:96px;overflow-x:clip}
+h1,h2,h3,p,ul{margin:0}ul{padding:0;list-style:none}a{color:inherit;text-decoration:none}
+.w{max-width:1400px;margin:0 auto;padding:0 clamp(16px,3vw,40px)}
+.u{font-family:Unbounded,sans-serif;letter-spacing:-.03em;text-transform:uppercase}
+.mono{font:400 12px/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.cur{position:fixed;left:0;top:0;width:14px;height:14px;border-radius:50%;background:var(--ac);pointer-events:none;z-index:9998;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .25s,height .25s}
+.cur.big{width:80px;height:80px}
+@media(hover:none){.cur{display:none}}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(16px,3vw,40px);mix-blend-mode:difference;color:#fff}
+nav .l{display:flex;gap:28px}nav a{font:500 13px Inter;text-transform:uppercase;letter-spacing:.06em}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:6vh}
+.hero h1{font-weight:800;font-size:clamp(26px,6.9vw,150px);line-height:.9}
+.hero h1 .row{display:block;white-space:nowrap;will-change:transform}
+.hero h1 .row:nth-child(2){color:var(--ac);padding-left:6vw}
+.hero h1 .row:nth-child(3){-webkit-text-stroke:2px var(--fg);color:transparent;padding-left:2vw}
+.hero .bt{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px;align-items:end}
+.hero .bt p{max-width:52ch;color:var(--mut);font-size:17px}
+.hero .bt .r{display:flex;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font:600 14px Unbounded;text-transform:uppercase;letter-spacing:-.01em;transition:transform .2s}
+.btn1{background:var(--ac);color:#0d0d0d}.btn2{border:1px solid var(--line)}
+.mq{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;white-space:nowrap}
+.mq .t{display:inline-flex;gap:56px;font:600 clamp(28px,4vw,56px)/1 Unbounded;text-transform:uppercase;will-change:transform}
+.mq .t span::after{content:"✺";color:var(--ac);margin-left:56px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr)}.stats div{padding:48px 24px 48px 0}.stats div+div{padding-left:24px;border-left:1px solid var(--line)}
+.stats b{display:block;font:800 clamp(44px,6vw,96px)/1 Unbounded;letter-spacing:-.05em;margin-bottom:10px}
+.reel{position:relative;height:calc(var(--n,4) * 100vh)}
+.reel .stick{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.reel .hd{display:flex;justify-content:space-between;align-items:end;padding:0 clamp(16px,3vw,40px);margin-bottom:32px}
+.reel .hd h2{font-size:clamp(40px,6vw,96px);font-weight:800}
+.track{display:flex;gap:28px;padding-left:clamp(16px,3vw,40px);will-change:transform}
+.card{flex:none;width:min(78vw,720px);min-height:58vh;border:1px solid var(--line);border-radius:28px;padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;background:#121211;position:relative;overflow:hidden}
+.card .bgn{position:absolute;right:-.06em;bottom:-.22em;font:800 clamp(140px,22vw,320px)/1 Unbounded;color:#1a1a18;pointer-events:none}
+.card h3{font:800 clamp(40px,5vw,80px)/.9 Unbounded;text-transform:uppercase;letter-spacing:-.04em;margin:18px 0 14px;position:relative}
+.card .tg{font-size:20px;color:var(--ac);position:relative}.card p{position:relative;max-width:52ch}.card .ap{color:var(--mut);margin-top:16px}
+.card .imp{margin-top:auto;padding-top:28px;font:600 18px Unbounded;text-transform:uppercase;letter-spacing:-.02em;position:relative}
+.card .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;position:relative}.card .tags span{font:400 12px "JetBrains Mono";padding:6px 10px;border:1px solid var(--line);border-radius:999px}
+.prog{height:2px;background:var(--line);margin:32px clamp(16px,3vw,40px) 0}.prog i{display:block;height:100%;width:0;background:var(--ac)}
+section.s{padding-top:140px}.sh{display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:8px;flex-wrap:wrap}.sh h2{font-size:clamp(40px,6vw,96px);font-weight:800}
+.pl li{display:grid;grid-template-columns:1.2fr 2fr auto;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);transition:color .2s,padding .3s}.pl li:hover{color:var(--ac);padding-left:16px}
+.pl li b{font:600 20px Unbounded;letter-spacing:-.02em}.pl li span{color:var(--mut)}
+.svc{display:grid;grid-template-columns:repeat(4,1fr)}.svc div{padding:36px 24px 28px 0;border-bottom:1px solid var(--line)}.svc div+div{padding-left:24px;border-left:1px solid var(--line)}.svc h3{font:600 22px/1.1 Unbounded;text-transform:uppercase;letter-spacing:-.03em;margin:16px 0 12px}.svc p{color:var(--mut)}
+.xp li{display:grid;grid-template-columns:260px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--line)}.xp h3{font:600 26px/1.15 Unbounded;letter-spacing:-.03em}.xp h3 span{color:var(--mut);font-weight:400}
+.xp ul{margin-top:14px;display:grid;gap:8px}.xp ul li{display:block;border:0;padding:0 0 0 22px;position:relative;color:var(--mut)}.xp ul li::before{content:"→";position:absolute;left:0;color:var(--ac)}
+.ct{padding:clamp(100px,14vw,200px) 0 60px;text-align:center}
+.ct h2{font-size:clamp(52px,13vw,240px);font-weight:800;line-height:.85}
+.ct h2 span{color:var(--ac)}
+.ct .em{display:inline-block;margin-top:48px;font:600 clamp(16px,2.6vw,36px) Unbounded;letter-spacing:-.03em;border-bottom:2px solid var(--ac);padding-bottom:6px;word-break:break-all}
+@media(max-width:900px){nav .l{display:none}.hero .bt{grid-template-columns:1fr}.hero .bt .r{justify-content:flex-start}.stats,.svc{grid-template-columns:1fr 1fr}.stats div:nth-child(3),.svc div:nth-child(3){border-left:0;padding-left:0}.xp li{grid-template-columns:1fr;gap:8px}.pl li{grid-template-columns:1fr;gap:4px}.svc div{padding-left:0!important;border-left:0!important}}
+@media(max-width:520px){.stats,.svc{grid-template-columns:1fr}.stats div{border-left:0!important;padding-left:0!important}}
+@media(prefers-reduced-motion:reduce){.reel{height:auto!important}.reel .stick{position:static;height:auto;padding:100px 0}.track{flex-direction:column;transform:none!important;padding-right:clamp(16px,3vw,40px)}.card{width:100%}}
+</style>
+</head>
+<body>
+<div class="cur" aria-hidden="true"></div>
+<div id="app"></div>
+<script src="/assets/data.js"></script>
+<script>
+(function(){
+const P=window.PROFILE,pad=n=>String(n).padStart(2,"0"),sk=P.skills.flatMap(s=>s.items);
+document.getElementById("app").innerHTML=`
+<nav><a href="#" class="u" style="font-weight:800">KD©</a><div class="l"><a href="#work">Work</a><a href="#xp">Experience</a><a href="${P.links.resume}" target="_blank" rel="noopener">Résumé</a><a href="#contact">Contact</a></div></nav>
+<header class="w hero"><p class="mono" style="margin-bottom:24px">● ${P.available}</p>
+<h1 class="u"><span class="row" data-s="-0.25">I build AI that</span><span class="row" data-s="0.2">listens, reads</span><span class="row" data-s="-0.15">&amp; talks back</span></h1>
+<div class="bt"><p>${P.intro}</p><div class="r"><a class="btn btn1 hov" href="mailto:${P.email}?subject=Project%20enquiry">Start a project ↗</a><a class="btn btn2 hov" href="#work">Work ↓</a></div></div></header>
+<div class="mq" aria-hidden="true"><div class="t" id="mq">${sk.concat(sk).map(s=>`<span>${s}</span>`).join("")}</div></div>
+<div class="w"><div class="stats">${P.stats.map(s=>`<div><b>${s.value}</b><span class="mono">${s.label}</span></div>`).join("")}</div></div>
+<section class="reel" id="work" style="--n:${P.cases.length}"><div class="stick"><div class="hd"><h2 class="u">Selected work</h2><span class="mono">Scroll →</span></div>
+<div class="track" id="track">${P.cases.map((c,i)=>`<article class="card hov"><span class="bgn">${pad(i+1)}</span><span class="mono">${pad(i+1)} / ${c.kind}</span><h3>${c.name}</h3><p class="tg">${c.tagline}.</p><p class="ap">${c.problem} ${c.approach}</p><p class="imp">↗ ${c.impact}</p><div class="tags">${c.stack.map(s=>`<span>${s}</span>`).join("")}</div></article>`).join("")}</div>
+<div class="prog"><i id="prog"></i></div></div></section>
+<div class="w">
+<section class="s"><div class="sh"><h2 class="u">Archive</h2><span class="mono">${P.projects.length} more projects</span></div>
+<ul class="pl">${P.projects.map(p=>`<li class="hov"><b>${p.url?`<a href="${p.url}" target="_blank" rel="noopener">${p.name} ↗</a>`:p.name}</b><span>${p.desc}</span><span class="mono">${p.tag}</span></li>`).join("")}</ul><p class="mono" style="margin-top:16px;text-transform:none">${P.ndaNote}</p></section>
+<section class="s"><div class="sh"><h2 class="u">Services</h2></div><div class="svc">${P.services.map((s,i)=>`<div><span class="mono" style="color:var(--ac)">${pad(i+1)}</span><h3>${s.title}</h3><p>${s.desc}</p></div>`).join("")}</div></section>
+<section class="s" id="xp"><div class="sh"><h2 class="u">Experience</h2><span class="mono">${P.education.degree} · ${P.education.detail}</span></div>
+<ul class="xp">${P.experience.map(e=>`<li><div><p class="mono" style="color:var(--fg)">${e.when}</p><p class="mono" style="margin-top:6px">${e.place}</p></div><div><h3>${e.role} <span>/ ${e.org}</span></h3><ul>${e.points.map(p=>`<li>${p}</li>`).join("")}</ul>${e.stack?`<p class="mono" style="margin-top:16px">${e.stack}</p>`:""}</div></li>`).join("")}</ul></section>
+<section class="ct" id="contact"><p class="mono">Got something that should talk?</p><h2 class="u" style="margin-top:24px">Let's<br><span>build it.</span></h2>
+<a class="em hov" href="mailto:${P.email}?subject=Project%20enquiry">${P.email}</a>
+<p class="mono" style="margin-top:40px;display:flex;gap:28px;justify-content:center;flex-wrap:wrap"><a class="hov" href="${P.links.linkedin}" target="_blank" rel="noopener">LinkedIn ↗</a><a class="hov" href="${P.links.github}" target="_blank" rel="noopener">GitHub ↗</a><a class="hov" href="${P.links.resume}" target="_blank" rel="noopener">Résumé ↗</a></p></section>
+<p class="mono" style="display:flex;justify-content:space-between;padding:24px 0;border-top:1px solid var(--line)"><span>© ${new Date().getFullYear()} ${P.name}</span><span>${P.location}</span></p></div>`;
+const still=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const rows=[...document.querySelectorAll(".hero .row")],mq=document.getElementById("mq"),reel=document.getElementById("work"),track=document.getElementById("track"),prog=document.getElementById("prog");
+let mqx=0,last=scrollY,vel=0;
+function frame(){
+ const y=scrollY;vel=vel*0.9+(y-last)*0.1;last=y;
+ if(!still){rows.forEach(r=>r.style.transform=`translateX(${y*parseFloat(r.dataset.s)}px)`);
+  mqx-=1+Math.abs(vel)*0.4;const half=mq.scrollWidth/2;if(-mqx>half)mqx+=half;mq.style.transform=`translateX(${mqx}px)`;
+  const r=reel.getBoundingClientRect(),total=reel.offsetHeight-innerHeight,p=Math.min(1,Math.max(0,-r.top/total));
+  const max=track.scrollWidth-innerWidth+40;track.style.transform=`translateX(${-p*Math.max(0,max)}px)`;prog.style.width=p*100+"%";}
+ requestAnimationFrame(frame);}
+requestAnimationFrame(frame);
+const cur=document.querySelector(".cur");let cx=0,cy=0,tx=0,ty=0;
+addEventListener("pointermove",e=>{tx=e.clientX;ty=e.clientY;});
+(function c(){cx+=(tx-cx)*.2;cy+=(ty-cy)*.2;cur.style.left=cx+"px";cur.style.top=cy+"px";requestAnimationFrame(c);})();
+document.querySelectorAll(".hov,a").forEach(el=>{el.addEventListener("pointerenter",()=>cur.classList.add("big"));el.addEventListener("pointerleave",()=>cur.classList.remove("big"));});
+})();
+</script>
+<script src="/assets/switcher.js" defer></script>
+</body>
+</html>

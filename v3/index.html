@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="robots" content="noindex" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kuldeep Dangi — v3 Terminal</title>
+<meta name="description" content="Kuldeep Dangi — Software Engineer building voice AI, LLM systems and full-stack products." />
+<link rel="icon" href="/assets/img/favicon/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#0b0e14;--pane:#0f131b;--line:#1e2533;--fg:#c9d1d9;--mut:#6e7a8a;--g:#7ee787;--b:#79c0ff;--y:#e3b341;--p:#d2a8ff;--r:#ff7b72}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(1200px 600px at 50% -10%,#142033,transparent),var(--bg);color:var(--fg);font:400 14.5px/1.65 "JetBrains Mono",ui-monospace,monospace;padding:clamp(12px,3vw,40px) clamp(10px,3vw,40px) 96px;min-height:100vh}
+a{color:var(--b)}h1,h2,h3,p,ul{margin:0}ul{padding:0;list-style:none}
+.win{max-width:1080px;margin:0 auto;background:var(--pane);border:1px solid var(--line);border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5);overflow:hidden}
+.tb{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:#0c1017;position:sticky;top:0;z-index:5}
+.tb i{width:12px;height:12px;border-radius:50%;background:#ff5f57}.tb i:nth-child(2){background:#febc2e}.tb i:nth-child(3){background:#28c840}
+.tb span{margin-left:12px;color:var(--mut);font-size:12px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tabs{display:flex;gap:2px}.tabs a{color:var(--mut);text-decoration:none;font-size:12px;padding:4px 10px;border-radius:6px}.tabs a:hover{color:var(--fg);background:var(--line)}
+.body{padding:clamp(16px,3vw,32px)}
+.ps{color:var(--g)}.ps b{color:var(--b);font-weight:400}.cmd{color:var(--fg)}
+.blk{margin-top:28px}.blk:first-child{margin-top:0}.out{margin-top:10px;padding-left:2px}
+.ascii{color:var(--g);font-size:clamp(5px,1.35vw,13px);line-height:1.1;white-space:pre;margin:14px 0 6px;overflow:hidden}
+.c-m{color:var(--mut)}.c-g{color:var(--g)}.c-b{color:var(--b)}.c-y{color:var(--y)}.c-p{color:var(--p)}.c-r{color:var(--r)}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:2px 16px}@media(max-width:560px){.kv{grid-template-columns:1fr}.kv dt{margin-top:8px}}
+dl,dd{margin:0}
+.card{border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-top:12px;transition:border-color .2s,transform .2s}.card:hover{border-color:#30405a;transform:translateX(4px)}
+.card h3{font-size:15px;color:var(--y)}.card h3 span{color:var(--mut);font-weight:400}
+.tag{display:inline-block;color:var(--p);margin-right:10px}
+.row{display:grid;grid-template-columns:28ch 1fr auto;gap:16px;padding:6px 0;border-bottom:1px dashed var(--line)}@media(max-width:760px){.row{grid-template-columns:1fr}}
+.cur{display:inline-block;width:9px;height:18px;background:var(--g);vertical-align:-3px;animation:bl 1s step-end infinite}@keyframes bl{50%{opacity:0}}
+.input{display:flex;gap:8px;align-items:center;margin-top:28px}
+.input input{flex:1;background:transparent;border:0;outline:0;color:var(--fg);font:inherit;caret-color:var(--g)}
+.hint{color:var(--mut);font-size:12px;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chips button{font:inherit;font-size:12px;color:var(--fg);background:var(--line);border:1px solid #2a3446;border-radius:6px;padding:4px 10px;cursor:pointer}.chips button:hover{border-color:var(--g);color:var(--g)}
+.tl li{display:grid;grid-template-columns:20ch 1fr;gap:16px;padding:10px 0}@media(max-width:760px){.tl li{grid-template-columns:1fr;gap:2px}}
+.tl ul li{display:block;padding:2px 0 2px 18px;position:relative;color:var(--fg)}.tl ul li::before{content:"›";position:absolute;left:0;color:var(--g)}
+.bar{display:inline-block;height:8px;background:linear-gradient(90deg,var(--g),var(--b));border-radius:2px;vertical-align:middle;margin-right:8px}
+@media(prefers-reduced-motion:reduce){.cur{animation:none}}
+</style>
+</head>
+<body>
+<div class="win">
+  <div class="tb"><i></i><i></i><i></i><span>kuldeep@portfolio: ~ — zsh</span><nav class="tabs"><a href="#work">work</a><a href="#xp">log</a><a href="#contact">contact</a></nav></div>
+  <div class="body" id="term"></div>
+</div>
+<script src="/assets/data.js"></script>
+<script>
+(function(){
+const P=window.PROFILE,T=document.getElementById("term");
+const ps=c=>`<div><span class="ps">kuldeep@indore <b>~</b> $</span> <span class="cmd">${c}</span></div>`;
+const ascii=` _  __     _     _                    ____                    _
+| |/ /   _| | __| | ___  ___ _ __    |  _ \\  __ _ _ __   __ _(_)
+| ' / | | | |/ _\` |/ _ \\/ _ \\ '_ \\   | | | |/ _\` | '_ \\ / _\` | |
+| . \\ |_| | | (_| |  __/  __/ |_) |  | |_| | (_| | | | | (_| | |
+|_|\\_\\__,_|_|\\__,_|\\___|\\___| .__/   |____/ \\__,_|_| |_|\\__, |_|
+                            |_|                         |___/   `;
+const S={
+ whoami:()=>`<div class="ascii" aria-label="${P.name}">${ascii}</div>
+<p class="c-g">${P.role} — ${P.focus}</p><p style="margin-top:10px;max-width:78ch">${P.intro}</p>
+<p style="margin-top:10px" class="c-m">● <span class="c-g">${P.available}</span> · ${P.location} · ${P.timezone}</p>`,
+ stats:()=>`<dl class="kv">${P.stats.map(s=>`<dt class="c-m">${s.label.toLowerCase().replace(/\s+/g,"_")}</dt><dd><span class="bar" style="width:${Math.min(160,parseFloat(s.value.replace(/,/g,""))*1.6+20)}px"></span><span class="c-y">${s.value}</span></dd>`).join("")}</dl>`,
+ work:()=>P.cases.map(c=>`<div class="card"><h3>▸ ${c.name} <span>// ${c.kind}</span></h3>
+<p style="margin-top:6px">${c.tagline}.</p><p class="c-m" style="margin-top:6px"><span class="c-r">problem</span>  ${c.problem}</p><p class="c-m"><span class="c-b">approach</span> ${c.approach}</p><p><span class="c-g">impact</span>   <span class="c-g">${c.impact}</span></p>
+<p style="margin-top:8px">${c.stack.map(s=>`<span class="tag">#${s.toLowerCase().replace(/\s+/g,"-")}</span>`).join("")}</p></div>`).join(""),
+ projects:()=>`${P.projects.map(p=>`<div class="row"><span class="c-y">${p.url?`<a href="${p.url}" target="_blank" rel="noopener">${p.name} ↗</a>`:p.name}</span><span>${p.desc}</span><span class="c-p">${p.tag}</span></div>`).join("")}<p class="c-m" style="margin-top:10px"># ${P.ndaNote}</p>`,
+ services:()=>P.services.map((s,i)=>`<p><span class="c-g">[${i+1}]</span> <span class="c-y">${s.title}</span> <span class="c-m">— ${s.desc}</span></p>`).join(""),
+ log:()=>`<ul class="tl">${P.experience.map(e=>`<li><span class="c-m">${e.when}</span><div><p><span class="c-y">${e.role}</span> @ <span class="c-b">${e.org}</span></p><ul>${e.points.map(p=>`<li>${p}</li>`).join("")}</ul>${e.stack?`<p class="c-p" style="margin-top:4px;font-size:12.5px">${e.stack}</p>`:""}</div></li>`).join("")}</ul>`,
+ stack:()=>`<pre style="margin:0;white-space:pre-wrap;font:inherit">{\n${P.skills.map(s=>`  <span class="c-b">"${s.group}"</span>: [${s.items.map(i=>`<span class="c-g">"${i}"</span>`).join(", ")}]`).join(",\n")}\n}</pre>`,
+ education:()=>`<p><span class="c-y">${P.education.degree}</span> — ${P.education.school} <span class="c-m">(${P.education.detail}, ${P.education.year})</span></p>${P.credentials.map(c=>`<p class="c-m">· ${c}</p>`).join("")}`,
+ contact:()=>`<p>email    <a href="mailto:${P.email}?subject=Project%20enquiry">${P.email}</a></p><p>linkedin <a href="${P.links.linkedin}" target="_blank" rel="noopener">${P.links.linkedin.replace("https://www.","")}</a></p><p>github   <a href="${P.links.github}" target="_blank" rel="noopener">${P.links.github.replace("https://","")}</a></p><p>resume   <a href="${P.links.resume}" target="_blank" rel="noopener">kuldeep-dangi-resume.pdf</a></p>`,
+ help:()=>`<p class="c-m">available commands:</p><p>${Object.keys(S).filter(k=>k!=="clear").map(k=>`<span class="c-g">${k}</span>`).join("  ")}  <span class="c-g">clear</span></p>`
+};
+const files={whoami:"whoami",stats:"cat stats.json",work:"ls ./case-studies --long",projects:"ls ./projects",services:"cat services.md",log:"git log --career",stack:"cat stack.json",education:"cat education.txt",contact:"./contact.sh"};
+const ids={work:"work",log:"xp",contact:"contact"};
+let html="";for(const k of Object.keys(files)){html+=`<div class="blk"${ids[k]?` id="${ids[k]}"`:""}>${ps(files[k])}<div class="out">${S[k]()}</div></div>`;}
+html+=`<div id="hist"></div><label class="input"><span class="ps">kuldeep@indore <b>~</b> $</span><input id="in" autocomplete="off" spellcheck="false" aria-label="Type a command, for example help"></label><div class="hint">Interactive — type <span class="c-g">help</span> or tap a command:</div><div class="chips">${Object.keys(S).map(k=>`<button type="button" data-c="${k}">${k}</button>`).join("")}</div>`;
+T.innerHTML=html;
+const H=document.getElementById("hist"),I=document.getElementById("in");
+const run=c=>{c=c.trim().toLowerCase();if(!c)return;if(c==="clear"){H.innerHTML="";return;}
+ const fn=S[c]||S[Object.keys(files).find(k=>files[k]===c)];
+ H.insertAdjacentHTML("beforeend",`<div class="blk">${ps(c.replace(/</g,"&lt;"))}<div class="out">${fn?fn():`<span class="c-r">zsh: command not found: ${c.replace(/</g,"&lt;")}</span> — try <span class="c-g">help</span>`}</div></div>`);
+ I.scrollIntoView({block:"center",behavior:"smooth"});};
+I.addEventListener("keydown",e=>{if(e.key==="Enter"){run(I.value);I.value="";}});
+T.querySelectorAll(".chips button").forEach(b=>b.addEventListener("click",()=>run(b.dataset.c)));
+})();
+</script>
+<script src="/assets/switcher.js" defer></script>
+</body>
+</html>
