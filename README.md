@@ -1,61 +1,28 @@
-Personal Portfolio ⚡️
-A sleek and responsive portfolio template for showcasing your projects and skills!
+# ikuldeepdangi.github.io
 
-https://ikuldeepdangi.github.io
+Personal portfolio of **Kuldeep Dangi**, Software Engineer (voice AI, NLP and full-stack).
+Live at **https://ikuldeepdangi.github.io**.
 
-Maintenance
-Website shields.io
-Ask Me Anything !
-License
+## Structure
 
-Website Preview
+| Path | What it is |
+|---|---|
+| `index.html` | The whole site (single page) |
+| `assets/css/site.css` | Styles: light/dark theme tokens at the top |
+| `assets/js/site.js` | Theme toggle, hero waveform, scroll reveals, copy-email |
+| `assets/resume/resume.html` | Source of the résumé |
+| `assets/resume/kuldeep-dangi-resume.pdf` | Résumé served by the site |
+| `assets/img/og-card.png` | Link-preview image for LinkedIn/WhatsApp/X |
 
-<p align="center"> 
-  <kbd>
-    <a href="https://ikuldeepdangi.github.io" target="_blank"><img src="examples/preview.gif">
-  </a>
-  </kbd>
-</p>
-:star: Don't forget to star this repository if you find it helpful!
+No build step and no dependencies beyond Google Fonts.
 
-Features 📋
-⚡️ Fully Responsive
-⚡️ Valid HTML5 & CSS3
-⚡️ Typing animation using Typed.js
-⚡️ Easy to customize
+## Updating
 
-Installation & Deployment 📦
-Clone the repository and modify the content of <b>index.html</b> as per your requirements.
-Add or remove images from ikuldeepdangi.github.io/assets/img/ directory as needed.
-I recommend deploying the website using GitHub Pages.
-To deploy your website, create a GitHub repository with the name <ikuldeepdangi>.github.io and push the generated code to the master branch.
-<b>NOTE:</b> Set the analyticsId from your Google Analytics account inside the Google Analytics script tag if you want to use your own analytics.
-Sections 📚
-✔️ About me
-✔️ Experience
-✔️ Projects
-✔️ Skills
-✔️ Education
-✔️ Contact Info
-✔️ Resume
+- **Content:** edit `index.html` directly.
+- **Résumé:** edit `assets/resume/resume.html`, open it in Chrome, Print → Save as PDF (A4, margins none,
+  background graphics on) and overwrite `kuldeep-dangi-resume.pdf`.
+- **Colours/fonts:** change the variables in `:root` at the top of `site.css`.
 
-To view a live example, click here
+## Deploy
 
-Tools Used 🛠️
-<b>GitHub Pages</b> - Hosting static website (HTML, CSS, JS).
-<b>Materialize</b> - CSS framework for Google's Material Design components.
-<b>Typed.js</b> - JavaScript library for typing animation.
-Contributing 💡
-Step 1
-Option 1
-
-🍴 Fork this repository!
-Option 2
-
-👯 Clone this repository to your local machine.
-Step 2
-Build your code 🔨🔨🔨
-Step 3
-🔃 Create a new pull request.
-License 📄
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+GitHub Pages publishes the `main` branch automatically on every push; changes are live in 1–2 minutes.
