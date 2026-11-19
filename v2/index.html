@@ -1,91 +1,153 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" /><meta name="robots" content="noindex" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kuldeep Dangi — v2 Swiss</title>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kuldeep Dangi — Swiss</title>
 <meta name="description" content="Kuldeep Dangi — Software Engineer building voice AI, LLM systems and full-stack products." />
+<meta property="og:title" content="Kuldeep Dangi — AI &amp; Software Engineer" /><meta property="og:image" content="https://ikuldeepdangi.github.io/assets/img/og-card.png" /><meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="/assets/img/favicon/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-:root{--bg:#f4f4f2;--ink:#0a0a0a;--mut:#6b6b6b;--line:#0a0a0a;--red:#ff2e17;--g:clamp(16px,3vw,32px)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:80px;overflow-x:hidden}
+:root{--bg:#f2f2ef;--ink:#0a0a0a;--mut:#6b6b68;--red:#ff2e17;--g:clamp(16px,3vw,32px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:80px;overflow-x:clip}
 h1,h2,h3,p,ul{margin:0}ul{padding:0;list-style:none}a{color:inherit}
-.w{max-width:1320px;margin:0 auto;padding:0 var(--g)}
-.mono{font:400 12px/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.04em}
-nav{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:20px 0;border-bottom:2px solid var(--line);align-items:center}
-nav .n{grid-column:span 4;font-weight:800;letter-spacing:-.02em}nav .l{grid-column:span 8;display:flex;justify-content:flex-end;gap:24px}
+::selection{background:var(--red);color:#fff}
+.w{max-width:1360px;margin:0 auto;padding:0 var(--g)}
+.mono{font:500 12px/1.4 "JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.04em}
+.mut{color:var(--mut)}.red{color:var(--red)}
+.prog{position:fixed;left:0;top:0;height:3px;background:var(--red);width:0;z-index:100}
+/* grid overlay (press G) */
+.gridov{position:fixed;inset:0;z-index:90;pointer-events:none;display:none}.gridov.on{display:block}
+.gridov .w{height:100%;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g)}.gridov i{background:rgba(255,46,23,.07);border-inline:1px solid rgba(255,46,23,.25)}
+nav{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:18px 0;border-bottom:2px solid var(--ink);align-items:center;position:sticky;top:0;background:var(--bg);z-index:50}
+nav .n{grid-column:span 3;font-weight:800;letter-spacing:-.02em}nav .c{grid-column:span 3}nav .l{grid-column:span 6;display:flex;justify-content:flex-end;gap:22px}
 nav a{text-decoration:none}nav a:hover{color:var(--red)}
-.hero{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:40px 0 0}
-.hero h1{grid-column:1/-1;font-weight:900;font-size:clamp(64px,17vw,260px);line-height:.8;letter-spacing:-.065em;text-transform:uppercase}
-.hero h1 span{display:block}.hero h1 span:last-child{color:var(--red)}
-.hero .meta{grid-column:1/5;padding-top:32px}.hero .lede{grid-column:6/-1;padding-top:32px;font-size:clamp(20px,2.2vw,30px);line-height:1.2;font-weight:500;letter-spacing:-.02em}
-.dot{display:inline-block;width:10px;height:10px;background:var(--red);border-radius:50%;margin-right:8px}
-.mq{margin-top:56px;border-block:2px solid var(--line);overflow:hidden;white-space:nowrap}
-.mq div{display:inline-flex;gap:48px;padding:16px 0;animation:m 40s linear infinite;font-weight:800;font-size:28px;letter-spacing:-.02em;text-transform:uppercase}
-.mq div span::after{content:"✳";color:var(--red);margin-left:48px}
-@keyframes m{to{transform:translateX(-50%)}}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid var(--line)}
-.stats div{padding:28px var(--g) 28px 0}.stats div+div{border-left:2px solid var(--line);padding-left:var(--g)}
-.stats b{display:block;font-weight:900;font-size:clamp(44px,6vw,88px);letter-spacing:-.05em;line-height:1}
-sec,section{display:block;padding-top:120px}
-.sh{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);border-bottom:2px solid var(--line);padding-bottom:16px;align-items:end}
-.sh .mono{grid-column:span 3;color:var(--red)}.sh h2{grid-column:span 9;font-weight:900;font-size:clamp(40px,7vw,104px);letter-spacing:-.055em;line-height:.85;text-transform:uppercase}
-.case{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:32px 0;border-bottom:2px solid var(--line);transition:background .25s,color .25s}
-.case:hover{background:var(--ink);color:var(--bg)}.case:hover .mut{color:#aaa}
-.case .i{grid-column:span 1;font-weight:800;color:var(--red)}.case h3{grid-column:span 4;font-weight:900;font-size:clamp(32px,4vw,56px);letter-spacing:-.04em;line-height:.9;text-transform:uppercase}
-.case .d{grid-column:span 5}.case .d p+p{margin-top:12px}.case .k{grid-column:span 2;text-align:right}
-.mut{color:var(--mut)}.imp{font-weight:700;color:var(--red)}
-.list li{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:16px 0;border-bottom:1px solid #c9c9c4}
-.list .a{grid-column:span 4;font-weight:700}.list .b{grid-column:span 6}.list .c{grid-column:span 2;text-align:right}
-.list a{text-decoration:none}.list a:hover{color:var(--red)}
-.svc{display:grid;grid-template-columns:repeat(4,1fr)}.svc div{padding:28px var(--g) 28px 0;border-bottom:2px solid var(--line)}.svc div+div{border-left:2px solid var(--line);padding-left:var(--g)}
-.svc h3{font-weight:800;font-size:24px;letter-spacing:-.03em;margin:20px 0 10px}
-.xp li{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:28px 0;border-bottom:2px solid var(--line)}
-.xp .t{grid-column:span 3}.xp .r{grid-column:span 9}.xp h3{font-weight:800;font-size:28px;letter-spacing:-.03em}.xp ul{margin-top:12px;display:grid;gap:6px}.xp ul li{display:block;border:0;padding:0 0 0 18px;position:relative}.xp ul li::before{content:"—";position:absolute;left:0;color:var(--red)}
-.sk{display:grid;grid-template-columns:repeat(4,1fr)}.sk div{padding:28px var(--g) 0 0}.sk div+div{border-left:2px solid var(--line);padding-left:var(--g)}.sk p{font-size:20px;font-weight:600;letter-spacing:-.02em;margin-top:14px;line-height:1.35}
-.ct{background:var(--red);color:var(--ink);margin-top:140px;padding:80px 0 60px}
-.ct h2{font-weight:900;font-size:clamp(48px,11vw,180px);letter-spacing:-.06em;line-height:.82;text-transform:uppercase}
-.ct a.em{display:inline-block;margin-top:40px;font-weight:800;font-size:clamp(20px,3.4vw,48px);letter-spacing:-.03em;text-decoration:none;border-bottom:4px solid;word-break:break-all}
-.ct .lk{display:flex;gap:32px;margin-top:48px;flex-wrap:wrap}.ct .lk a{text-decoration:none;font-weight:700}
-@media(max-width:860px){.hero .meta,.hero .lede{grid-column:1/-1}.hero .meta{order:2}.stats,.svc,.sk{grid-template-columns:1fr 1fr}.stats div:nth-child(3),.svc div:nth-child(3),.sk div:nth-child(3){border-left:0;padding-left:0}
-.case>*,.list li>*,.xp li>*{grid-column:1/-1!important;text-align:left!important}.case,.list li,.xp li{gap:8px}.sh .mono,.sh h2{grid-column:1/-1}nav .n{grid-column:span 12}nav .l{display:none}}
-@media(max-width:520px){.stats,.svc,.sk{grid-template-columns:1fr}.stats div,.svc div,.sk div{border-left:0!important;padding-left:0!important}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+.hero{padding:44px 0 0}
+.hero h1{font-weight:900;font-size:clamp(64px,17.5vw,268px);line-height:.8;letter-spacing:-.065em;text-transform:uppercase}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .ch{display:inline-block;transform:translateY(105%);transition:transform 1s cubic-bezier(.2,.9,.1,1)}
+.ready .hero h1 .ch{transform:none}
+.hero h1 .ln:last-child{color:var(--red)}
+.hg{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);margin-top:36px}
+.hg .meta{grid-column:1/5}.hg .lede{grid-column:6/-1;font-size:clamp(20px,2.3vw,32px);line-height:1.18;font-weight:500;letter-spacing:-.025em}
+.hg .lede b{font-weight:800}
+.dot{display:inline-block;width:10px;height:10px;background:var(--red);border-radius:50%;margin-right:8px;animation:p 1.6s infinite}@keyframes p{50%{opacity:.25}}
+.cta{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 22px;border:2px solid var(--ink);font:800 15px "Inter Tight";text-transform:uppercase;letter-spacing:-.01em;text-decoration:none;transition:background .2s,color .2s}
+.btn.r{background:var(--red);border-color:var(--red);color:#fff}.btn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.mq{margin-top:56px;border-block:2px solid var(--ink);overflow:hidden;white-space:nowrap}
+.mq div{display:inline-flex;gap:48px;padding:16px 0;animation:m 42s linear infinite;font-weight:800;font-size:28px;letter-spacing:-.02em;text-transform:uppercase}
+.mq div span::after{content:"✳";color:var(--red);margin-left:48px}@keyframes m{to{transform:translateX(-50%)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid var(--ink)}
+.stats div{padding:28px var(--g) 28px 0}.stats div+div{border-left:2px solid var(--ink);padding-left:var(--g)}
+.stats b{display:block;font-weight:900;font-size:clamp(44px,6vw,92px);letter-spacing:-.055em;line-height:1}
+section{padding-top:clamp(100px,11vw,150px)}
+.sh{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);border-bottom:2px solid var(--ink);padding-bottom:16px;align-items:end;margin-bottom:8px}
+.sh .mono{grid-column:span 3;color:var(--red)}.sh h2{grid-column:span 9;font-weight:900;font-size:clamp(44px,7.4vw,112px);letter-spacing:-.06em;line-height:.84;text-transform:uppercase}
+/* case studies */
+.case{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:48px 0;border-bottom:2px solid var(--ink);align-items:center}
+.case .txt{grid-column:1/6}.case .vis{grid-column:7/-1}
+.case:nth-child(even) .txt{grid-column:8/-1;order:2}.case:nth-child(even) .vis{grid-column:1/7;order:1}
+.case .i{font-weight:900;font-size:clamp(56px,7vw,104px);line-height:.8;letter-spacing:-.06em;color:var(--red)}
+.case h3{font-weight:900;font-size:clamp(40px,4.6vw,68px);letter-spacing:-.05em;line-height:.88;text-transform:uppercase;margin:18px 0 14px}
+.case .tg{font-weight:700;font-size:19px;letter-spacing:-.01em}
+.case dl{margin:18px 0 0;display:grid;grid-template-columns:96px 1fr;gap:8px 12px;font-size:15.5px}.case dt{color:var(--red)}.case dd{margin:0;color:#2b2b29}
+.case .imp{margin-top:20px;padding:14px 16px;background:var(--ink);color:var(--bg);font-weight:800;font-size:17px;letter-spacing:-.01em}
+.case .imp span{color:var(--red)}
+.case .stk{margin-top:14px}
+.vis{--mk-bg:#fff;--mk-card:#f5f5f2;--mk-fg:#0a0a0a;--mk-mut:#6b6b68;--mk-ac:#ff2e17;--mk-ac2:#0a0a0a;--mk-ln:rgba(10,10,10,.14);--mk-r:2px;--mk-on:#fff;--mk-font:"Inter Tight",sans-serif;--mk-mono:"JetBrains Mono",monospace}
+.vis .mk{border:2px solid var(--ink);box-shadow:14px 14px 0 var(--red);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.case:hover .vis .mk{transform:translate(-6px,-6px);box-shadow:20px 20px 0 var(--red)}
+/* archive */
+.list li{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:18px 0;border-bottom:1px solid #c9c9c4;transition:background .2s,color .2s,padding .3s}
+.list li:hover{background:var(--ink);color:var(--bg);padding-inline:14px}.list li:hover .mut{color:#a8a8a3}
+.list .a{grid-column:span 4;font-weight:800;font-size:20px;letter-spacing:-.02em}.list .b{grid-column:span 6}.list .c{grid-column:span 2;text-align:right}
+.list a{text-decoration:none}
+.tip{position:fixed;left:0;top:0;z-index:80;pointer-events:none;padding:8px 12px;background:var(--red);color:#fff;font:500 12px "JetBrains Mono";text-transform:uppercase;transform:translate(-50%,-140%) scale(.6);opacity:0;transition:opacity .2s,transform .2s;white-space:nowrap}
+.tip.on{opacity:1;transform:translate(-50%,-140%) scale(1)}
+.cols4{display:grid;grid-template-columns:repeat(4,1fr)}.cols4>div{padding:28px var(--g) 28px 0;border-bottom:2px solid var(--ink)}.cols4>div+div{border-left:2px solid var(--ink);padding-left:var(--g)}
+.cols4 h3{font-weight:800;font-size:26px;letter-spacing:-.035em;margin:20px 0 10px;line-height:1}
+.cols4 .big{font-weight:900;font-size:64px;line-height:.8;letter-spacing:-.06em;color:var(--red)}
+.xp li{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--g);padding:30px 0;border-bottom:2px solid var(--ink)}
+.xp .t{grid-column:span 3}.xp .r{grid-column:span 9}.xp h3{font-weight:800;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.035em;line-height:1.05}
+.xp ul{margin-top:14px;display:grid;gap:6px}.xp ul li{display:block;border:0;padding:0 0 0 22px;position:relative}.xp ul li::before{content:"—";position:absolute;left:0;color:var(--red)}
+.sk{display:grid;grid-template-columns:repeat(4,1fr)}.sk div{padding:28px var(--g) 0 0}.sk div+div{border-left:2px solid var(--ink);padding-left:var(--g)}.sk p{font-size:20px;font-weight:600;letter-spacing:-.02em;margin-top:14px;line-height:1.35}
+.ct{background:var(--red);color:var(--ink);margin-top:150px;padding:88px 0 64px;position:relative;overflow:hidden}
+.ct h2{font-weight:900;font-size:clamp(56px,12vw,200px);letter-spacing:-.065em;line-height:.8;text-transform:uppercase}
+.ct a.em{display:inline-flex;align-items:center;gap:.4em;margin-top:44px;font-weight:900;font-size:clamp(20px,3.6vw,52px);letter-spacing:-.04em;text-decoration:none;border-bottom:5px solid;word-break:break-all}
+.ct a.em span{display:inline-block;transition:transform .3s}.ct a.em:hover span{transform:translateX(12px) rotate(-45deg)}
+.ct .lk{display:flex;gap:32px;margin-top:48px;flex-wrap:wrap}.ct .lk a{text-decoration:none;font-weight:700}.ct .lk a:hover{color:#fff}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:24px 0}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hg .meta,.hg .lede{grid-column:1/-1}.hg .meta{order:2}.stats,.cols4,.sk{grid-template-columns:1fr 1fr}.stats div:nth-child(3),.cols4>div:nth-child(3),.sk div:nth-child(3){border-left:0;padding-left:0}
+.case .txt,.case .vis,.case:nth-child(even) .txt,.case:nth-child(even) .vis{grid-column:1/-1;order:0}.case{gap:28px}.vis .mk{box-shadow:8px 8px 0 var(--red)}
+.list li>*,.xp li>*{grid-column:1/-1!important;text-align:left!important}.list li,.xp li{gap:6px}.sh .mono,.sh h2{grid-column:1/-1}nav .n{grid-column:span 7}nav .c{grid-column:span 5;text-align:right}nav .l{display:none}}
+@media(max-width:560px){.stats,.cols4,.sk{grid-template-columns:1fr}.stats div,.cols4>div,.sk div{border-left:0!important;padding-left:0!important}.vis .mk{aspect-ratio:auto;min-height:330px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.rv,.hero h1 .ch{opacity:1!important;transform:none!important;transition:none!important}}
 </style>
 </head>
 <body>
+<div class="prog" id="prog"></div>
+<div class="gridov" id="gov" aria-hidden="true"><div class="w">${"<i></i>".repeat(12)}</div></div>
+<div class="tip" id="tip" aria-hidden="true"></div>
 <div id="app"></div>
 <script src="/assets/data.js"></script>
+<script src="/assets/mocks.js"></script>
 <script>
 (function(){
-const P=window.PROFILE,pad=n=>String(n).padStart(2,"0");
+const P=window.PROFILE,pad=n=>String(n).padStart(2,"0"),$=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const [f,l]=P.name.split(" ");
+const split=(w,d)=>[...w].map((c,i)=>`<span class="ch" style="transition-delay:${d+i*.045}s">${c}</span>`).join("");
+$("#gov .w").innerHTML="<i></i>".repeat(12);
+const sk=[...P.skills[0].items,...P.skills[1].items];
 document.getElementById("app").innerHTML=`
 <div class="w">
-<nav><div class="n">${P.name} ©${new Date().getFullYear()}</div><div class="l mono"><a href="#work">Work</a><a href="#xp">Experience</a><a href="#stack">Stack</a><a href="${P.links.resume}" target="_blank" rel="noopener">Résumé ↗</a><a href="#contact">Contact</a></div></nav>
-<header class="hero"><h1><span>${f}</span><span>${l}.</span></h1>
-<div class="meta mono"><p><span class="dot"></span>${P.available}</p><p style="margin-top:8px">${P.role} · ${P.location}</p></div>
-<p class="lede">${P.headline.join(" ")} ${P.intro}</p></header>
+<nav><div class="n">${P.name} ©${new Date().getFullYear()}</div><div class="c mono mut" id="clk"></div><div class="l mono"><a href="#work">Work</a><a href="#how">Process</a><a href="#xp">Experience</a><a href="${P.links.resume}" target="_blank" rel="noopener">Résumé ↗</a><a href="#contact" class="red">Contact</a></div></nav>
+<header class="hero"><h1 aria-label="${P.name}"><span class="ln" aria-hidden="true">${split(f,.05)}</span><span class="ln" aria-hidden="true">${split(l+".",.3)}</span></h1>
+<div class="hg"><div class="meta mono"><p><span class="dot"></span>${P.available}</p><p style="margin-top:8px">${P.role} · ${P.location}</p><p class="mut" style="margin-top:8px">${P.focus}</p></div>
+<div class="lede rv"><p><b>${P.headline.join(" ")}</b> ${P.intro}</p><div class="cta"><a class="btn r" href="#contact">Start a project →</a><a class="btn" href="#work">Case studies</a></div></div></div></header>
 </div>
-<div class="mq" aria-hidden="true"><div>${[...P.skills[0].items,...P.skills[1].items].concat([...P.skills[0].items,...P.skills[1].items]).map(s=>`<span>${s}</span>`).join("")}</div></div>
+<div class="mq" aria-hidden="true"><div>${sk.concat(sk).map(s=>`<span>${s}</span>`).join("")}</div></div>
 <div class="w">
-<div class="stats">${P.stats.map(s=>`<div><b>${s.value}</b><span class="mono">${s.label}</span></div>`).join("")}</div>
+<div class="stats">${P.stats.map(s=>`<div class="rv"><b class="cnt" data-v="${s.value}">${s.value}</b><span class="mono">${s.label}</span></div>`).join("")}</div>
 <section id="work"><div class="sh"><span class="mono">01 / Selected work</span><h2>Case studies</h2></div>
-${P.cases.map((c,i)=>`<article class="case"><span class="i mono">${pad(i+1)}</span><h3>${c.name}</h3><div class="d"><p><b>${c.tagline}.</b> ${c.problem}</p><p class="mut">${c.approach}</p><p class="imp">→ ${c.impact}</p></div><span class="k mono mut">${c.stack.join("<br>")}</span></article>`).join("")}
-<ul class="list" style="margin-top:56px">${P.projects.map(p=>`<li><span class="a">${p.url?`<a href="${p.url}" target="_blank" rel="noopener">${p.name} ↗</a>`:p.name}</span><span class="b mut">${p.desc}</span><span class="c mono mut">${p.tag}</span></li>`).join("")}</ul>
+${P.cases.map((c,i)=>`<article class="case"><div class="txt rv"><span class="i">${pad(i+1)}</span><p class="mono mut" style="margin-top:14px">${c.kind}</p><h3>${c.name}</h3><p class="tg">${c.tagline}.</p>
+<dl><dt class="mono">Problem</dt><dd>${c.problem}</dd><dt class="mono">Approach</dt><dd>${c.approach}</dd></dl>
+<p class="imp"><span>→</span> ${c.impact}</p><p class="mono mut stk">${c.stack.join(" / ")}</p></div><div class="vis rv">${MOCKS.render(i)}</div></article>`).join("")}
+<p class="mono mut" style="margin-top:56px">Archive — ${P.projects.length} more projects</p>
+<ul class="list" style="margin-top:12px;border-top:2px solid var(--ink)">${P.projects.map(p=>`<li data-tip="${p.url?"Open ↗":p.tag}"><span class="a">${p.url?`<a href="${p.url}" target="_blank" rel="noopener">${p.name} ↗</a>`:p.name}</span><span class="b mut">${p.desc}</span><span class="c mono mut">${p.tag}</span></li>`).join("")}</ul>
 <p class="mono mut" style="margin-top:16px">${P.ndaNote}</p></section>
 <section><div class="sh"><span class="mono">02 / Services</span><h2>What I build</h2></div>
-<div class="svc">${P.services.map((s,i)=>`<div><span class="mono" style="color:var(--red)">${pad(i+1)}</span><h3>${s.title}</h3><p class="mut">${s.desc}</p></div>`).join("")}</div></section>
-<section id="xp"><div class="sh"><span class="mono">03 / Experience</span><h2>Track record</h2></div>
-<ul class="xp">${P.experience.map(e=>`<li><div class="t mono">${e.when}<br><span class="mut">${e.place}</span></div><div class="r"><h3>${e.role} <span class="mut">/ ${e.org}</span></h3><ul>${e.points.map(p=>`<li>${p}</li>`).join("")}</ul>${e.stack?`<p class="mono mut" style="margin-top:14px">${e.stack}</p>`:""}</div></li>`).join("")}</ul></section>
-<section id="stack"><div class="sh"><span class="mono">04 / Stack</span><h2>Toolkit</h2></div>
-<div class="sk">${P.skills.map(s=>`<div><span class="mono" style="color:var(--red)">${s.group}</span><p>${s.items.join(", ")}</p></div>`).join("")}</div>
+<div class="cols4">${P.services.map((s,i)=>`<div class="rv"><span class="mono red">${pad(i+1)}</span><h3>${s.title}</h3><p class="mut">${s.desc}</p></div>`).join("")}</div></section>
+<section id="how"><div class="sh"><span class="mono">03 / Process</span><h2>How I work</h2></div>
+<div class="cols4">${P.process.map((s,i)=>`<div class="rv"><span class="big">${pad(i+1)}</span><h3>${s.step}</h3><p class="mut">${s.desc}</p></div>`).join("")}</div></section>
+<section id="xp"><div class="sh"><span class="mono">04 / Experience</span><h2>Track record</h2></div>
+<ul class="xp">${P.experience.map(e=>`<li class="rv"><div class="t mono">${e.when}<br><span class="mut">${e.place}</span></div><div class="r"><h3>${e.role} <span class="mut">/ ${e.org}</span></h3><ul>${e.points.map(p=>`<li>${p}</li>`).join("")}</ul>${e.stack?`<p class="mono mut" style="margin-top:14px">${e.stack}</p>`:""}</div></li>`).join("")}</ul></section>
+<section id="stack"><div class="sh"><span class="mono">05 / Stack</span><h2>Toolkit</h2></div>
+<div class="sk">${P.skills.map(s=>`<div class="rv"><span class="mono red">${s.group}</span><p>${s.items.join(", ")}</p></div>`).join("")}</div>
 <p class="mono mut" style="margin-top:40px">${P.education.degree} · ${P.education.school} · ${P.education.detail} · ${P.education.year}</p></section>
 </div>
-<section class="ct" id="contact"><div class="w"><p class="mono" style="margin-bottom:24px">05 / Contact</p><h2>Let's build<br>the next one.</h2>
-<a class="em" href="mailto:${P.email}?subject=Project%20enquiry">${P.email} →</a>
-<div class="lk mono"><a href="${P.links.linkedin}" target="_blank" rel="noopener">LinkedIn ↗</a><a href="${P.links.github}" target="_blank" rel="noopener">GitHub ↗</a><a href="${P.links.resume}" target="_blank" rel="noopener">Résumé ↗</a><span>${P.location} · ${P.timezone}</span></div></div></section>`;
+<section class="ct" id="contact"><div class="w"><p class="mono" style="margin-bottom:24px">06 / Contact</p><h2>Let's build<br>the next one.</h2>
+<a class="em" href="mailto:${P.email}?subject=Project%20enquiry">${P.email} <span>→</span></a>
+<div class="lk mono"><a href="${P.links.linkedin}" target="_blank" rel="noopener">LinkedIn ↗</a><a href="${P.links.github}" target="_blank" rel="noopener">GitHub ↗</a><a href="${P.links.resume}" target="_blank" rel="noopener">Résumé ↗</a><span>${P.location} · ${P.timezone}</span></div></div></section>
+<div class="w"><footer class="mono mut"><span>© ${new Date().getFullYear()} ${P.name}</span><span>Set on a 12-column grid — press G to see it</span></footer></div>`;
+
+const still=matchMedia("(prefers-reduced-motion: reduce)").matches;
+requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.add("ready")));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{rootMargin:"0px 0px -8% 0px"});$$(".rv").forEach(el=>io.observe(el));
+MOCKS.observe();
+// counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,raw=el.dataset.v,m=raw.match(/[\d.,]+/);if(!m||still)return;const n=parseFloat(m[0].replace(/,/g,"")),d=(m[0].split(".")[1]||"").length,t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1300),v=n*(1-Math.pow(1-k,4));el.textContent=raw.replace(m[0],d?v.toFixed(d):Math.round(v).toLocaleString("en-US"));if(k<1)requestAnimationFrame(f);})(t0);}),{threshold:.6});$$(".cnt").forEach(el=>cio.observe(el));
+// progress
+const prog=$("#prog");addEventListener("scroll",()=>{const h=document.documentElement;prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%";},{passive:true});
+// clock
+const clk=$("#clk"),tick=()=>clk.textContent="Indore "+new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",second:"2-digit",timeZone:"Asia/Kolkata"});tick();setInterval(tick,1000);
+// cursor tip on archive
+const tip=$("#tip");if(matchMedia("(hover:hover)").matches)$$(".list li").forEach(li=>{li.addEventListener("pointerenter",()=>{tip.textContent=li.dataset.tip;tip.classList.add("on");});li.addEventListener("pointerleave",()=>tip.classList.remove("on"));li.addEventListener("pointermove",e=>{tip.style.left=e.clientX+"px";tip.style.top=e.clientY+"px";});});
+// grid overlay
+addEventListener("keydown",e=>{const t=e.target;if(e.metaKey||e.ctrlKey||(t&&/INPUT|TEXTAREA/.test(t.tagName)))return;if(e.key==="g"||e.key==="G")$("#gov").classList.toggle("on");});
 })();
 </script>
 <script src="/assets/switcher.js" defer></script>

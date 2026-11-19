@@ -3,34 +3,29 @@
 Portfolio of **Kuldeep Dangi**, Software Engineer (voice AI, LLM systems, full-stack).
 Live at **https://ikuldeepdangi.github.io** (opens the latest version, `/v10/`).
 
-## Ten versions
+## Three versions
 
-Every version has a floating switcher at the bottom (‹ › arrows, a panel listing all versions, and the `[` / `]` keys).
+Every page has a switcher at the bottom (tabs, plus the `[` / `]` keys). The home page opens `/v8/`.
 
 | Version | Style |
 |---|---|
-| `/v1/` | Editorial: paper, serif, one accent, light/dark toggle |
-| `/v2/` | Swiss: giant type, strict grid, red |
-| `/v3/` | Terminal: interactive developer console (type `help`) |
-| `/v4/` | Bento: dark product-launch grid with spotlight cards and a live IST clock |
-| `/v5/` | Brutal: neo-brutalist, thick borders, offset shadows |
-| `/v6/` | Aurora: glass panels over animated colour, tilt cards |
-| `/v7/` | Noir: black and gold luxury, slow reveals |
-| `/v8/` | Kinetic: scroll-driven type, pinned horizontal work reel, custom cursor |
-| `/v9/` | Signal: interactive 3D voice field, magnetic buttons |
-| `/v10/` | Flagship: live AI-call demo, ⌘K command palette, sticky case studies, brief composer |
+| `/v2/` | Swiss: giant type, strict 12-column grid (press `G` to see it), red |
+| `/v5/` | Brutal: neo-brutalist, draggable stickers, crossing marquee bands |
+| `/v8/` | Kinetic: intro loader, scroll-driven type, pinned horizontal case-study reel, contextual cursor |
+
+Each case study shows an animated product mockup (`assets/mocks.js`), styled by the version through `--mk-*` CSS variables.
 
 ## Editing content
 
-All text lives in **`assets/data.js`**. Versions 2–10 render from it, so a change there updates every version.
-`/v1/` is static HTML in `v1/index.html`.
+All text lives in **`assets/data.js`**; every version renders from it.
 
 | Path | What it is |
 |---|---|
 | `assets/data.js` | All content: profile, case studies, projects, experience, skills |
-| `assets/switcher.js` | The version switcher (add a version by appending to `VERSIONS`) |
+| `assets/mocks.js` | Animated product mockups for the four case studies (order matches `cases`) |
+| `assets/switcher.js` | The version switcher (edit `VERSIONS` to add or remove one) |
 | `vN/index.html` | Each version's layout and styles |
-| `assets/resume/resume.html` → `kuldeep-dangi-resume.pdf` | Résumé source and PDF (print to A4, background graphics on) |
+| `assets/resume/resume.html` -> `kuldeep-dangi-resume.pdf` | Résumé source and PDF (print to A4, background graphics on) |
 | `assets/img/og-card.png` | Link-preview image |
 
 No build step. GitHub Pages publishes `main` automatically.
