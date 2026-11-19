@@ -31,13 +31,27 @@
     ".mk-ring{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--_ac);color:var(--mk-on,#000);font-weight:800;animation:mkr 1.6s ease-out infinite;align-self:center}" +
     "@keyframes mkr{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--_ac) 60%,transparent)}100%{box-shadow:0 0 0 16px transparent}}" +
     ".mk-cur{animation:mkb .9s step-end infinite}" +
-    "@media(prefers-reduced-motion:reduce){.mk *{animation-duration:0s!important;animation-iteration-count:1!important;animation-delay:0s!important}}";
+    "@media(prefers-reduced-motion:reduce){.mk *{animation:none!important}.mk .mk-ln,.mk .mk-sug,.mk .mk-bub,.mk .mk-tkt,.mk .mk-row{opacity:1!important;transform:none!important}.mk .mk-bar i{width:var(--w)!important}.mk .mk-wave span{transform:scaleY(.55)}}" +
+    "@media(max-width:600px){.mk .mk-body{grid-template-columns:1fr!important}.mk .mk-phone{width:100%;max-width:none}.mk .mk-wave{height:30px}}";
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
 
   function wave(n) { var s = ""; for (var i = 0; i < n; i++) s += '<span style="animation-delay:' + ((i * 0.13) % 1).toFixed(2) + "s;animation-duration:" + (0.5 + ((i * 37) % 9) / 12).toFixed(2) + 's"></span>'; return s; }
   function top(title, right) { return '<div class="mk-top"><i></i><i></i><i></i><b>' + title + '</b><span class="mono">' + (right || "") + "</span></div>"; }
 
   var M = [
+    // Kallo.ai — multilingual voice agent
+    function () {
+      return top("Kallo · Mira, front-desk agent", '<span class="mk-live">Live · Hinglish</span>') +
+        '<div class="mk-body" style="grid-template-columns:1.25fr 1fr">' +
+        '<div class="mk-card" style="display:flex;flex-direction:column;gap:6px"><span class="mono">Live captions</span><div class="mk-wave">' + wave(34) + "</div>" +
+        '<div class="mk-ln c" style="animation-delay:.3s"><em>Caller</em><span>Kal subah 10 baje appointment mil sakta hai?</span></div>' +
+        '<div class="mk-ln a" style="animation-delay:1.1s"><em>Agent</em><span>Ji haan, 10:00 AM free hai. Naam bata dijiye?</span></div>' +
+        '<div class="mk-ln c" style="animation-delay:1.9s"><em>Caller</em><span>Rahul Mehta. Thanks!<span class="mk-cur">▍</span></span></div></div>' +
+        '<div style="display:grid;gap:10px;align-content:start">' +
+        '<div class="mk-sug" style="animation-delay:2.3s"><span class="mono">⚙ Tool call</span><p style="margin:5px 0 0;font-family:var(--mk-mono,monospace);font-size:11px">book_appointment(<br>&nbsp;time="10:00", name="Rahul")</p></div>' +
+        '<div class="mk-card"><span class="mono">Outcome</span><p style="margin:6px 0 0;font-weight:700">✓ Booked · WhatsApp sent</p></div>' +
+        '<div class="mk-card"><div class="mk-row" style="padding-top:0"><span class="mono">Duration</span><b>1:42</b></div><div class="mk-row"><span class="mono">Cost</span><b>₹1.9</b></div></div></div></div>';
+    },
     // CallScope — live agent copilot
     function () {
       return top("CallScope · Agent console", '<span class="mk-live">Live 04:12</span>') +

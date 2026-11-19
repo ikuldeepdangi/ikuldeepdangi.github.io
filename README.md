@@ -3,17 +3,28 @@
 Portfolio of **Kuldeep Dangi**, Software Engineer (voice AI, LLM systems, full-stack).
 Live at **https://ikuldeepdangi.github.io** (opens the latest version, `/v10/`).
 
-## Three versions
+## Versions
 
-Every page has a switcher at the bottom (tabs, plus the `[` / `]` keys). The home page opens `/v8/`.
+The home page opens **`/a10/`**. Every page has a switcher at the bottom (‹ › arrows, a panel listing all versions, and the `[` / `]` keys).
+
+**Clean (a1–a10)** share one foundation (`assets/clean.css` + `assets/clean.js`); each version only sets fonts, colours and layout.
 
 | Version | Style |
 |---|---|
-| `/v2/` | Swiss: giant type, strict 12-column grid (press `G` to see it), red |
-| `/v5/` | Brutal: neo-brutalist, draggable stickers, crossing marquee bands |
-| `/v8/` | Kinetic: intro loader, scroll-driven type, pinned horizontal case-study reel, contextual cursor |
+| `/a1/` Paper | White, quiet, typographic |
+| `/a2/` Graphite | Dark and understated |
+| `/a3/` Serif | Editorial reading layout (Newsreader) |
+| `/a4/` Sidebar | Sticky profile on the left, work scrolls on the right |
+| `/a5/` Cards | Soft surfaces, rounded cards, centred hero |
+| `/a6/` Midnight | Deep navy with a subtle glow |
+| `/a7/` Grid | Hairlines, square corners, mono labels (IBM Plex) |
+| `/a8/` Docs | Documentation style with an "On this page" contents |
+| `/a9/` Sand | Warm neutrals, deep green, Fraunces |
+| `/a10/` Signature | Light/dark toggle, ⌘K quick actions — the default |
 
-Each case study shows an animated product mockup (`assets/mocks.js`), styled by the version through `--mk-*` CSS variables.
+**Bold** (hand-built): `/v2/` Swiss, `/v5/` Brutal, `/v8/` Kinetic.
+
+Every case study shows an animated product mockup (`assets/mocks.js`), styled per version through `--mk-*` CSS variables.
 
 ## Editing content
 
@@ -22,11 +33,12 @@ All text lives in **`assets/data.js`**; every version renders from it.
 | Path | What it is |
 |---|---|
 | `assets/data.js` | All content: profile, case studies, projects, experience, skills |
-| `assets/mocks.js` | Animated product mockups for the four case studies (order matches `cases`) |
-| `assets/switcher.js` | The version switcher (edit `VERSIONS` to add or remove one) |
-| `vN/index.html` | Each version's layout and styles |
-| `assets/resume/resume.html` -> `kuldeep-dangi-resume.pdf` | Résumé source and PDF (print to A4, background graphics on) |
-| `assets/img/og-card.png` | Link-preview image |
+| `assets/mocks.js` | Animated product mockups, one per case study (order matches `cases`) |
+| `assets/clean.css`, `assets/clean.js` | Shared layout, mobile menu and behaviours for a1–a10 |
+| `aN/index.html` | A clean version: tokens, fonts and options (`window.CLEAN`) |
+| `vN/index.html` | A bold version's full layout and styles |
+| `assets/switcher.js` | The version switcher (edit `VERSIONS`) |
+| `assets/resume/resume.html` -> `kuldeep-dangi-resume.pdf` | Résumé source and PDF |
 
 No build step. GitHub Pages publishes `main` automatically.
 

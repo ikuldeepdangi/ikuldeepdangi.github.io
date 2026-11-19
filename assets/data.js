@@ -16,7 +16,7 @@ window.PROFILE = {
     resume: "/assets/resume/kuldeep-dangi-resume.pdf"
   },
   headline: ["I build AI that", "listens, reads", "and talks back."],
-  intro: "Software engineer with 2.5+ years shipping production AI — real-time call transcription, agent-assist copilots, LLM chatbots and the Django / FastAPI + React products around them. I take ideas from prototype to systems that handle thousands of real conversations a day.",
+  intro: "Software engineer with 2.5+ years shipping production AI — multilingual voice agents, real-time call transcription, agent-assist copilots, LLM chatbots and the Django / FastAPI + React products around them. I take ideas from prototype to systems that handle thousands of real conversations a day.",
   stats: [
     { value: "2.5+", label: "Years in production AI" },
     { value: "30+", label: "AI & web projects delivered" },
@@ -24,6 +24,15 @@ window.PROFILE = {
     { value: "60%", label: "Faster agent response" }
   ],
   cases: [
+    {
+      name: "Kallo.ai",
+      kind: "Voice AI · Multilingual agents",
+      tagline: "AI calling agents that speak Hindi, English and Hinglish",
+      problem: "Small businesses miss calls, lose bookings and can't staff a phone line around the clock — especially for callers who switch between Hindi and English.",
+      approach: "Real-time voice agents on the Gemini Live API that answer calls, book, reschedule and cancel appointments, take messages and escalate emergencies through tool calls. Every call is logged with transcript, recording, summary and cost, and the owner gets a WhatsApp summary. Businesses get their own agent and demo link from an admin panel.",
+      impact: "Every call answered, logged and summarised — in the caller's language",
+      stack: ["Python", "Gemini Live API", "WebSockets", "SQLite", "WhatsApp"]
+    },
     {
       name: "CallScope",
       kind: "Voice AI · Contact centre",
@@ -62,6 +71,10 @@ window.PROFILE = {
     }
   ],
   projects: [
+    { name: "PayQube.io", desc: "Marketing website for a US payments company — modular HTML component system, industry and solution pages", tag: "Web · Client" },
+    { name: "Wardrobe-strategist studio", desc: "Magazine-style, mobile-first portfolio with a tappable portrait-silhouette cover, short videos and a self-serve admin", tag: "Flask · Client" },
+    { name: "Polygon Arbitrage Detector", desc: "Async bot that watches QuickSwap and SushiSwap prices and logs arbitrage opportunities", tag: "Rust · ethers-rs", url: "https://github.com/ikuldeepdangi/polygon-arbitrage-detector" },
+    { name: "FixFlow", desc: "AI customer-support agent with ticket storage and locally hosted LLM replies", tag: "FastAPI · Ollama", url: "https://github.com/ikuldeepdangi/FixFlow-AI-Agent" },
     { name: "AI Conversational Tools", desc: "PDF Q&A with LangChain, GPT-4 and vector search; domain chatbots behind REST APIs", tag: "LLM · RAG" },
     { name: "Smart Document Interpreter", desc: "Extracts insights and answers questions from complex documents", tag: "GPT-4 · HuggingFace" },
     { name: "NextGen SupportBot", desc: "Support agent that ingests documents and web pages to answer customers", tag: "Django · NLP" },
@@ -113,8 +126,8 @@ window.PROFILE = {
       points: ["Built a terminal-based directory system and Java games (Tic-Tac-Toe, Hangman)."] }
   ],
   skills: [
-    { group: "AI / ML", items: ["OpenAI", "Gemini", "LangChain", "Whisper", "Rasa", "HuggingFace", "TensorFlow", "PyTorch", "scikit-learn", "spaCy", "pandas"] },
-    { group: "Back end", items: ["Python", "Django", "Flask", "FastAPI", "REST", "GraphQL", "Twilio", "Web scraping"] },
+    { group: "AI / ML", items: ["OpenAI", "Gemini Live", "LangChain", "Whisper", "Rasa", "HuggingFace", "TensorFlow", "PyTorch", "scikit-learn", "spaCy", "pandas", "Ollama"] },
+    { group: "Back end", items: ["Python", "Rust", "Django", "Flask", "FastAPI", "REST", "GraphQL", "Twilio", "WebSockets", "Web scraping"] },
     { group: "Front end", items: ["React", "JavaScript", "Redux", "Tailwind CSS", "Bootstrap", "HTML", "CSS", "Figma"] },
     { group: "Data & infra", items: ["PostgreSQL", "MySQL", "SQLite", "Docker", "AWS", "Git"] }
   ],
