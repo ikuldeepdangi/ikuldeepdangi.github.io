@@ -29,7 +29,7 @@ window.PROFILE = {
       kind: "Voice AI · Multilingual agents",
       tagline: "AI calling agents that speak Hindi, English and Hinglish",
       problem: "Small businesses miss calls, lose bookings and can't staff a phone line around the clock — especially for callers who switch between Hindi and English.",
-      approach: "Real-time voice agents on the Gemini Live API that answer calls, book, reschedule and cancel appointments, take messages and escalate emergencies through tool calls. Every call is logged with transcript, recording, summary and cost, and the owner gets a WhatsApp summary. Businesses get their own agent and demo link from an admin panel.",
+      approach: "Real-time voice agents on the Gemini Live API that answer calls, book, reschedule and cancel appointments, take messages and escalate emergencies. Every call is logged with transcript, recording, summary and cost, and the owner gets a WhatsApp summary.",
       impact: "Every call answered, logged and summarised — in the caller's language",
       stack: ["Python", "Gemini Live API", "WebSockets", "SQLite", "WhatsApp"]
     },
